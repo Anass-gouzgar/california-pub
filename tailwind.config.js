@@ -13,6 +13,9 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors:{
+        mainYellowColor : "#FEE012"
+      },
       animation: {
         float: "float 3s ease-in-out infinite",
       },

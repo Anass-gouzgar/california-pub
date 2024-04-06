@@ -2,18 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 .mainBg {
-  background-image: url("../../public/assets/images/darkEffect.png");
-  background-size: cover;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
+ background-image: url("../../public/assets/images/darkEffect.png");
+ background-size: cover;
+ position: relative;
+ background-repeat: no-repeat;
+ background-position: center;
+ height: 100vh;
 }
-
 
 .grayscale {
  filter: grayscale(100%);
