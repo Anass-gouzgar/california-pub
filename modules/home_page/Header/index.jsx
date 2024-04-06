@@ -60,7 +60,7 @@ const Header = () => {
                   <li key={index}>
                     <Link
                       href={link.href}
-                      className="relative text-gray-200 z-50 before:content-[''] before:absolute before:w-0 before:h-2 before:bg-amber-500 before:bottom-0 before:rounded-xl before:-z-10 hover:before:w-1/2 before:duration-300"
+                      className="relative text-gray-200 z-50 before:content-[''] before:absolute before:w-0 before:h-2 before:bg-mainYellowColor before:bottom-0 before:rounded-xl before:-z-10 hover:before:w-1/2 before:duration-300"
                     >
                       {link.name}
                     </Link>
