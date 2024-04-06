@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 
+
 const Header = dynamic(() => import("/modules/home_page/Header/index.jsx"), {
     loading: () => <p></p>,
   }),
