@@ -163,7 +163,7 @@ let currentYear = new Date().getFullYear();
                   href="#"
                   className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                 >
-                  Meet the Notre Mission
+                  Notre Mission
                 </Link>
 
                 <Link

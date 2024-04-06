@@ -10,9 +10,9 @@ const Hero = () => {
     <section className=" h-auto grid md:grid-cols-2 p-44 bg-slate-900 pt-32 sm:pt-44 mainBg px-6 py-24g pb-44 gap-5 sm:p-10 ">
       {/* hero description */}
       <div className="flex flex-col justify-end md:justify-center mx-auto max-w-xl md:gap-6 md:h-[80%] ">
-        <h2 className=" text-2xl font-bold text-gray-900 md:text-5xl dark:text-white">
-          Bienvenue sur{" "}
-          <span className="text-6xl font-bold text-[#FEE012]">
+        <h2 className=" text-2xl font-bold  md:text-5xl text-white">
+          Bienvenue sur <br />
+          <span className="text-6xl font-bold text-mainYellowColor">
             California Pub
           </span>
         </h2>
