@@ -27,10 +27,10 @@ const index = () => {
                 alt={`logo-${i}`}
                 className="object-contain w-[200px] h-[60px] grayscale hover:cursor-pointer hover:scale-110 duration-700 ease-in-out"
               />
+
               {/* Add a divider after each image except the last one */}
-              
-                <div className="h-1 bg-mainYellowColor w-1/2 mx-auto my-4 rounded-full"></div>
-              
+
+              <div className="h-1 bg-mainYellowColor w-1/2 mx-auto my-4 rounded-full"></div>
             </div>
           ))}
         </Marquee>

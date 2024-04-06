@@ -40,7 +40,12 @@ const Hero = () => {
       </div>
       {/* machine image */}
       <div className="hidden md:flex h-[80%] bg-yellow-300  rounded-xl ovetrflow-hidden">
-        <Image alt="machine cnc" src={coc} className="w-full h-auto object-cover " />
+        <Image
+          alt="machine cnc"
+          src={coc}
+          className="w-full h-auto object-cover "
+          loading="lazy"
+        />
       </div>
     </section>
   );

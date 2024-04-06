@@ -1,3 +1,7 @@
+'use client';
+
+
+
 import React from "react";
 
 
@@ -41,17 +45,17 @@ const faqs = [
   return (
     <div className="flex flex-col w-full mx-auto justify-center dark:bg-slate-900 p-6">
       <h1 className="text-center md:text-4xl text-3xl font-bold text-white">FAQ</h1>
-      <div className="w-full md:w-1/2 lg:w-1/3 md:p-10 p-2 flex flex-col gap-3 mx-auto">
+      <div className="w-full md:w-1/2 md:p-10 p-2 flex flex-col gap-3 mx-auto">
         {/* Map through the FAQ data */}
         {faqs.map((faq, index) => (
           <details
             key={index}
             className="group [&_summary::-webkit-details-marker]:hidden"
           >
-            <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900 dark:bg-gray-600 dark:text-white">
+            <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900 dark:bg-gray-700 dark:text-white">
               <h2 className="font-medium">{faq.question}</h2>
               <svg
-                className="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
+                className="size-5 shrink-0 transition duration-1000 group-open:-rotate-180"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -65,7 +69,7 @@ const faqs = [
                 />
               </svg>
             </summary>
-            <p className="mt-4 px-4 leading-relaxed text-gray-700 dark:text-gray-200 duration-1000">
+            <p className="mt-4 p-4 leading-relaxed text-gray-700 dark:text-gray-200 transition duration-[3000] border border-mainYellowColor rounded-xl ">
               {faq.answer}
             </p>
           </details>
