@@ -1,42 +1,48 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
-import img from "../../../public/machine.png"
-
+import img from "../../../public/assets/images/machine.png";
+import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 dark:bg-gray-900 pt-16">
-      <div className="p-8 md:p-12 lg:px-16 lg:py-24">
-        <div className="mx-auto max-w-xl ltr:sm:text-left rtl:sm:text-right">
-          <h2 className="text-2xl font-bold text-gray-900 md:text-3xl dark:text-white">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit
+    <section className=" h-auto grid md:grid-cols-2 bg-gray-900 pt-32 sm:pt-24 mainBg px-6 py-24 gap-5 sm:p-10 ">
+      {/* hero description */}
+        <div className="flex flex-col justify-center mx-auto max-w-xl md:gap-6 ">
+          <h2 className=" text-2xl font-bold text-gray-900 md:text-5xl dark:text-white">
+            Bienvenue sur{" "}
+            <span className="text-6xl mt-10 font-bold text-amber-400">
+              California Pub
+            </span>
           </h2>
 
-          <p className="hidden text-gray-500 md:mt-4 md:block dark:text-gray-300">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas
-            tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim
-            et fermentum, augue. Aliquet amet volutpat quisque ut interdum
-            tincidunt duis.
+          <p className="sm:text-2xl  md:mt-4 md:block text-white">
+            Notre engagement envers l'excellence transforme chaque projet en une
+            expérience inoubliable. Commencez votre voyage vers l'excellence
+            avec une consultation personnalisée dès aujourd'hui.
           </p>
 
-          <div className="mt-4 md:mt-8">
-            <a
+          <div className="flex gap-4 mt-4 md:mt-8">
+            <Link
               href="#"
-              className="inline-block rounded bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400"
+              className="inline-block rounded bg-amber-500 px-6 py-3 text-sm font-bold text-black transition hover:bg-amber-600 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
             >
-              Get Started Today
-            </a>
+              Explorer Nos Services
+            </Link>
+            <Link
+              href="#"
+              className="inline-block rounded bg-amber-500 px-6 py-3 text-sm font-bold text-black transition hover:bg-amber-600 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
+            >
+             Contactez-nous Maintenant
+            </Link>
+
           </div>
         </div>
+      {/* machine image */}
+      <div className="grid place-items-center bg-yelilow-200">
+        <Image alt="machine cnc" src={img} className="w-full object-cover " />
       </div>
-
-      <Image
-        alt=""
-        src={img}
-        className="h-56 w-full object-cover sm:h-full"
-      />
     </section>
   );
-}
+};
 
-export default Hero
+export default Hero;
