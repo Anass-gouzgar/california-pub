@@ -60,7 +60,7 @@ const Header = () => {
                   <li key={index}>
                     <Link
                       href={link.href}
-                      className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                      className="relative text-gray-200 z-50 before:content-[''] before:absolute before:w-0 before:h-2 before:bg-amber-500 before:bottom-0 before:rounded-xl before:-z-10 hover:before:w-1/2 before:duration-300"
                     >
                       {link.name}
                     </Link>
@@ -114,7 +114,7 @@ const Header = () => {
                 <Link
                   key={index}
                   href={link.href}
-                  className="text-white hover:text-gray-900 transition"
+                  className="relative text-gray-500 hover:text-gray-500/75 z-50 before:content-[''] before:absolute before:w-0 before:h-2 before:bg-amber-500 before:bottom-0 before:rounded-xl before:-z-10 hover:before:w-1/2 before:duration-300"
                 >
                   {link.name}
                 </Link>
