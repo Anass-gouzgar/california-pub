@@ -4,7 +4,7 @@ const nextConfig = {
     domains: ["images.unsplash.com"],
   },
   rules: {
-    "react/no-unescaped-entities": "off",
+    "react/no-unescaped-entities": "off"
   },
 };
 
