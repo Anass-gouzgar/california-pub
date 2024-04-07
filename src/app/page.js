@@ -4,6 +4,9 @@ import dynamic from "next/dynamic";
 const Header = dynamic(() => import("/modules/home_page/Header/index.jsx"), {
     loading: () => <p></p>,
   }),
+  Map = dynamic(() => import("/modules/home_page/Map/index.jsx"), {
+    loading: () => <p></p>,
+  }),
   WhatsAppIcon = dynamic(
     () => import("/modules/home_page/Whats_App_Icon/index.jsx"),
     {
@@ -40,6 +43,8 @@ export default function Home() {
         <Partenaires />
         <Divider />
         <Faq />
+        <Divider />
+        <Map />
         <Divider />
 
         <Footer />

@@ -43,8 +43,10 @@ const faqs = [
 
 
   return (
-    <div className="flex flex-col w-full mx-auto justify-center dark:bg-slate-900 p-6">
-      <h1 className="text-center md:text-4xl text-3xl font-bold text-white">FAQ</h1>
+    <div className="flex flex-col w-full mx-auto justify-center dark:bg-slate-900 p-6 pt-14 faqBg">
+      <h1 className="text-center md:text-4xl text-3xl font-bold text-black dark:text-white">
+        FAQ
+      </h1>
       <div className="w-full md:w-1/2 md:p-10 p-2 flex flex-col gap-3 mx-auto">
         {/* Map through the FAQ data */}
         {faqs.map((faq, index) => (
@@ -69,7 +71,7 @@ const faqs = [
                 />
               </svg>
             </summary>
-            <p className="mt-4 p-4 leading-relaxed text-gray-700 dark:text-gray-200 transition duration-[3000] border border-mainYellowColor rounded-xl ">
+            <p className="mt-4 p-4 leading-relaxed text-gray-700 dark:text-gray-200 transition duration-[3000] border border-mainYellowColor rounded-xl bg-slate ">
               {faq.answer}
             </p>
           </details>

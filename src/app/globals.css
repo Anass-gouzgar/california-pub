@@ -7,9 +7,29 @@
  background-size: cover;
  position: relative;
  background-repeat: no-repeat;
- background-position: center;
+ /* background-position: center; */
  height: 100vh;
 }
+
+/* faq bg */
+.faqBg {
+ background-image: url("../../public/assets/images/darkEffect.png");
+ background-size: cover;
+ position: relative;
+ background-repeat: no-repeat;
+ /* background-position: center; */
+ /* height: 100vh; */
+}
+
+/* partenaires section bg */
+/* .partBg {
+ background-image: url("../../public/assets/images/pattern-rbg.svg");
+ background-size: cover;
+ position: relative;
+ background-repeat: no-repeat;
+ background-position: center; */
+ /* height: 100vh; */
+/* } */
 
 .grayscale {
  filter: grayscale(100%);
