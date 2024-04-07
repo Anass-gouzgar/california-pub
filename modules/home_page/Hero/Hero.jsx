@@ -39,11 +39,11 @@ const Hero = () => {
         </div>
       </div>
       {/* machine image */}
-      <div className="hidden md:flex h-[80%] bg-yeljlow-300 pt-14 rounded-xl ovetrflow-hidden">
+      <div className="hidden md:flex h-[80%] pt-14 rounded-xl ovetrflow-hidden ">
         <Image
           alt="machine cnc"
           src={img}
-          className="w-full h-auto object-cover "
+          className="w-full h-auto object-cover  "
           loading="lazy"
         />
       </div>
