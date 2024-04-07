@@ -12,7 +12,7 @@ const WhatsAppIcon = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image src={img} alt="WhatsApp" className="w-16 h-auto" />
+        <Image src={img} alt="WhatsApp" className="w-14 md:w-20 h-auto" />
       </Link>
     </div>
   );

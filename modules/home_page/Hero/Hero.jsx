@@ -26,13 +26,13 @@ const Hero = () => {
         <div className="flex gap-4 mt-4 md:mt-8">
           <Link
             href="#"
-            className="inline-block rounded bg-mainYellowColor px-6 py-3 text-sm font-bold text-black transition hover:bg-amber-600 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
+            className="inline-block rounded bg-mainYellowColor px-6 py-3 text-sm font-bold text-black transition hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
           >
             Explorer Nos Services
           </Link>
           <Link
             href="#"
-            className="inline-block rounded bg-mainYellowColor px-6 py-3 text-sm font-bold text-black transition hover:bg-amber-600 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
+            className="inline-block rounded bg-mainYellowColor px-6 py-3 text-sm font-bold text-black transition hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
           >
             Contactez-nous Maintenant
           </Link>

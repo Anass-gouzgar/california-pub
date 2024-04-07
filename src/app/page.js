@@ -13,6 +13,9 @@ const Header = dynamic(() => import("/modules/home_page/Header/index.jsx"), {
       loading: () => <p></p>,
     }
   ),
+  ContactForm = dynamic(() => import("/modules/home_page/Form/index.jsx"), {
+    loading: () => <p></p>,
+  }),
   Partenaires = dynamic(
     () => import("/modules/home_page/Partenaires/index.jsx"),
     {
@@ -28,8 +31,12 @@ const Header = dynamic(() => import("/modules/home_page/Header/index.jsx"), {
   Divider = dynamic(() => import("/modules/home_page/Divider/index.jsx"), {
     loading: () => <p></p>,
   }),
+  Services = dynamic(() => import("/modules/home_page/Services/index.jsx"), {
+    loading: () => <p></p>,
+  }),
   Faq = dynamic(() => import("/modules/home_page/Faq/index.jsx"), {
     loading: () => <p></p>,
+    
   });
 
 export default function Home() {
@@ -45,6 +52,10 @@ export default function Home() {
         <Faq />
         <Divider />
         <Map />
+        <Divider />
+        <Services />
+        <Divider />
+        <ContactForm />
         <Divider />
 
         <Footer />
