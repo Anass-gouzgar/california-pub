@@ -13,6 +13,9 @@ const Header = dynamic(() => import("/modules/home_page/Header/index.jsx"), {
       loading: () => <p></p>,
     }
   ),
+  ContactForm = dynamic(() => import("/modules/home_page/Form/index.jsx"), {
+    loading: () => <p></p>,
+  }),
   Partenaires = dynamic(
     () => import("/modules/home_page/Partenaires/index.jsx"),
     {
@@ -51,6 +54,8 @@ export default function Home() {
         <Map />
         <Divider />
         <Services />
+        <Divider />
+        <ContactForm />
         <Divider />
 
         <Footer />
