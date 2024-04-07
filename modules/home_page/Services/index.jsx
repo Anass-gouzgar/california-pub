@@ -83,11 +83,11 @@ const Services = () => {
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">Services Offerts</h2>
-          <p className="mt-4 text- text-xl">
+          {/* <p className="mt-4 text- text-xl">
             Découvrez notre large gamme de services, allant de la gravure sur
             bois aux campagnes numériques. Nous proposons des solutions adaptées
             à tous vos besoins en impression, publicité et découpe.
-          </p>
+          </p> */}
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -106,7 +106,7 @@ const Services = () => {
         <div className="mt-12 text-center">
           <Link
             href="#"
-            className="mt-8 inline-block rounded bg-mainYellowColor px-12 py-3 text-sm font-medium dark:text-black transition hover:bg-amber-300 focus:outline-none focus:ring hover:scale-105 duration-300 focus:ring-red-700"
+            className="mt-8 inline-block rounded bg-mainYellowColor px-12 py-3 text-lg font-medium dark:text-black transition hover:bg-amber-300 focus:outline-none focus:ring hover:scale-105 duration-300 focus:ring-red-700"
           >
             Démarrer maintenant
           </Link>

@@ -38,7 +38,7 @@ const Map = () => {
 
             <Link
               href="#"
-              className="mt-8 inline-block rounded bg-mainYellowColor px-12 py-3 text-sm font-medium darktext-black transition hover:bg-amber-300 focus:outline-none focus:ring hover:scale-105 duration-300 focus:ring-red-700"
+              className="text-lg mt-8 inline-block rounded bg-mainYellowColor px-12 py-3 font-medium darktext-black transition hover:bg-amber-300 focus:outline-none focus:ring hover:scale-105 duration-300 focus:ring-red-700"
             >
               Commencez aujourd'hui 
             </Link>
