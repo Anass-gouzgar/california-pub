@@ -74,7 +74,7 @@ const Header = () => {
             <div className="sm:flex sm:gap-4">
               <Link
                 href="tel:+212768049725"
-                className="block w-[100px] text-center rounded bg-mainYellowColor py-2 text-sm font-bold text-black transition hover:bg-amber-600 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
+                className="block w-[100px] text-center rounded bg-mainYellowColor py-2 text-sm font-bold text-black transition hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
               >
                 Appelle-nous
               </Link>
