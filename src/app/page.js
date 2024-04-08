@@ -7,6 +7,12 @@ const Header = dynamic(() => import("/modules/home_page/Header/index.jsx"), {
   Map = dynamic(() => import("/modules/home_page/Map/index.jsx"), {
     loading: () => <p></p>,
   }),
+  RawMaterials = dynamic(
+    () => import("/modules/home_page/Raw_Materials/index.jsx"),
+    {
+      loading: () => <p></p>,
+    }
+  ),
   WhatsAppIcon = dynamic(
     () => import("/modules/home_page/Whats_App_Icon/index.jsx"),
     {
@@ -51,13 +57,15 @@ export default function Home() {
         <Divider />
         <Faq />
         <Divider />
-        <Map />
-        <Divider />
+
         <Services />
+        <Divider />
+        <RawMaterials />
         <Divider />
         <ContactForm />
         <Divider />
-
+        <Map />
+        <Divider />
         <Footer />
       </div>
     </div>

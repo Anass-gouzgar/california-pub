@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className=" h-auto grid md:grid-cols-2 p-44 bg-slate-900 pt-32 sm:pt-44 mainBg px-6 py-24g pb-44 gap-5 sm:p-10 ">
+    <section id="Acceuil" className=" h-auto grid md:grid-cols-2 p-44 bg-slate-900 pt-32 sm:pt-44 mainBg px-6 py-24g pb-44 gap-5 sm:p-10 ">
       {/* hero description */}
       <div className="flex flex-col justify-end md:justify-center mx-auto max-w-xl md:gap-6 md:h-[80%] ">
         <h2 className=" text-2xl font-bold  md:text-5xl text-white">
@@ -25,13 +25,13 @@ const Hero = () => {
 
         <div className="flex gap-4 mt-4 md:mt-8">
           <Link
-            href="#"
+            href="#Services"
             className="inline-block rounded bg-mainYellowColor px-6 py-3 text-sm font-bold text-black transition hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
           >
             Explorer Nos Services
           </Link>
           <Link
-            href="#"
+            href="#contact"
             className="inline-block rounded bg-mainYellowColor px-6 py-3 text-sm font-bold text-black transition hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
           >
             Contactez-nous Maintenant
