@@ -27,16 +27,17 @@ const Header = () => {
 
   // Navigation data
   const navLinks = [
-    { name: "Acceuil", href: "#" },
-    { name: "A propos", href: "#" },
-    { name: "Catalogue", href: "#" },
-    { name: "Services", href: "#" },
-    { name: "Projects", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Acceuil", href: "" },
+    { name: "Services", href: "#Services" },
+    { name: "Matières premières ", href: "#matières_premières" },
+    // { name: "Projects", href: "#" },
+    { name: "Contact", href: "#contact" },
+    { name: "A propos", href: "#à_propos" },
   ];
 
   return (
     <header
+    id="top"
       className={`flex justify-center items-center mx-auto fixed top-0 left-0 right-0 z-10 ${headerClass}`}
     >
       <div className="mx-auto max-w-screhen-xl px-4 sm:px-6 lg:px-8">
@@ -47,26 +48,25 @@ const Header = () => {
               <Image
                 src="/assets/images/logo.png"
                 alt="logo"
-                width={300}
+                width={200}
                 height={20}
+                className="h-auto w-auto object-cover"
               />
             </Link>
           </div>
           {/* navigation links */}
           <div className="hidden md:block pt-3 ">
             <nav aria-label="Global">
-              <ul className="flex items-center gap-6 text-lg">
+              <div className="flex items-center gap-6 text-lg">
                 {navLinks.map((link, index) => (
-                  <li key={index}>
-                    <Link
+                    <Link key={index}
                       href={link.href}
                       className="relative text-gray-200 z-50 before:content-[''] before:absolute before:w-0 before:h-2 before:bg-mainYellowColor before:bottom-0 before:rounded-xl before:-z-10 hover:before:w-1/2 before:duration-300"
                     >
                       {link.name}
                     </Link>
-                  </li>
                 ))}
-              </ul>
+              </div>
             </nav>
           </div>
           {/* call to action : call */}

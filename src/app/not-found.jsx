@@ -25,7 +25,7 @@ const NotFound = () => {
           </p>
 
           <Link
-            href="#"
+            href="/"
             className="mt-6 inline-block rounded bg-mainYellowColor px-5 py-3 text-sm font-medium text-black hover:bg-amber-500 focus:outline-none focus:ring"
           >
             Retourner à l'accueil

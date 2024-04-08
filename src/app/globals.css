@@ -11,6 +11,11 @@
  height: 100vh;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* faq bg */
 .secBg {
  background-image: url("../../public/assets/images/darkEffect.png");

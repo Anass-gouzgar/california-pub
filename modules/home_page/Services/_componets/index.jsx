@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const ServiceCard = ({ title, description, image, link }) => {
   return (
-    <article className="relative overflow-hidden rounded-lg hover:shadow-lg shadow-xl transition hover:border-slate-500 hover:shadow-amber-300">
+    <article className="relative overflow-hidden bg-black rounded-lg hover:shadow-lg shadow-xl transition hover:border-slate-500 hover:shadow-amber-300">
       <Image
         src={image}
         alt={title}
@@ -23,12 +23,12 @@ const ServiceCard = ({ title, description, image, link }) => {
           </p>
           <Link
             href={link}
-            class="group mt-4 inline-flex items-center gap-1 hover:scale-125 text-sm font-medium text-mainYellowColor"
+            className="group mt-4 inline-flex items-center gap-1 hover:scale-125 text-sm font-medium text-mainYellowColor"
           >
             En savoir plus
             <span
               aria-hidden="true"
-              class="block transition-all group-hover:ms-0.5 rtl:rotate-180"
+              className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
             >
               &rarr;
             </span>
