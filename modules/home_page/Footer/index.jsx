@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import img from "@/public/assets/images/footer_img.jpg"
-
+import scrollTop from '@/public/assets/images/scroll-top-icon.svg'
 
 const Footer = () => {
 
@@ -11,7 +11,7 @@ let currentYear = new Date().getFullYear();
 
 
   return (
-    <footer className="bg-white lg:grid lg:grid-cols-5 dark:bg-gray-900">
+    <footer id="footer" className=" lg:grid lg:grid-cols-5 bg-slate-900">
       {/* img */}
       <div className="relative block h-32 lg:col-span-2 lg:h-full">
         <Image
@@ -30,30 +30,29 @@ let currentYear = new Date().getFullYear();
               <span className="inldine text-lg uppercase tracking-wide text-mainYellowColor ">
                 Appelle-Nous
               </span>
-    
-             <Link
-                  href="tel:+212768049725"
-                  className="flex gap-3 text-2xl font-medium text-gray-900 hover:opacity-75 sm:text-3xl dark:text-white "
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="size-8 shrink-0 text-white dark:text-gray hover:-translate-y-1 duration-300 "
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                  <h2 className="hover:-translate-y-1 duration-300">
-                    +212768049725
-                  </h2>
-                </Link>
 
+              <Link
+                href="tel:+212768049725"
+                className="flex gap-3 text-2xl font-medium text-gray-900 hover:opacity-75 sm:text-3xl dark:text-white "
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-8 shrink-0 text-white dark:text-gray hover:-translate-y-1 duration-300 "
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <h2 className="hover:-translate-y-1 duration-300">
+                  +212768049725
+                </h2>
+              </Link>
             </div>
 
             <div className="mt-8 space-y-1 text-sm text-gray-700 dark:text-gray-200">
@@ -158,28 +157,21 @@ let currentYear = new Date().getFullYear();
                 >
                   Contactez-Nous
                 </Link>
-
-                <Link
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
-                >
-                  Notre Mission
-                </Link>
-
-                <Link
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
-                >
-                  Nos Valeurs
-                </Link>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-gray-100 pt-12 dark:border-gray-800">
-          <div className="flex items-center justify-center">
-            <p className="mt-8 text-sm text-gray-500 sm:mt-0 dark:text-gray-400">
+        <div className="mt-12 border-t  pt-12border-gray-800">
+          <div className="flex flex-col gap-2 items-center justify-center">
+            {/* go to top  */}
+              <Link
+                href="#top"
+                className="bg-mainYellowColor p-1 mt-3 rounded-full w-10 h-10 text-center cursor-pointer flex justify-center items-cente  transition hover:opacity-75 hover:scale-100 duration-3y00"
+              >
+                <Image src={scrollTop} alt="go to top" width={16} height={16} className='text-white' />
+              </Link>
+            <p className="mt-8 text-sm sm:mt-0 text-gray-400">
               &copy; {currentYear}. California Pub. All rights reserved.
             </p>
           </div>
