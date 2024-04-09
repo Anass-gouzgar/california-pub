@@ -10,7 +10,7 @@ export const metadata = {
   description:
     "Notre engagement envers l'excellence transforme chaque projet en une expérience inoubliable. Commencez votre voyage vers l'excellence avec une consultation personnalisée dès aujourd'hui.",
   icon: "/icon.ico",
-  ogImage: "../../public/assets/images/logo.png",
+  ogImage: "../../public/assets/images/og-logo.jpg",
   ogUrl: "https://californiapublicite.ma",
 };
 
