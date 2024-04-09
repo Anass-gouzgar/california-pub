@@ -116,7 +116,7 @@ const services = [
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 ">
             {/* first col - services */}
             <div className="">
-              <h1 className="text-lg font-bold text-gray-900 text-white">
+              <h1 className="text-lg font-bold text-white">
                 Nos Services <br /> Principaux
               </h1>
               <div className="mt-6 space-y-4 text-sm flex flex-col justify-center">
