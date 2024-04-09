@@ -83,7 +83,7 @@ const Header = () => {
             <div className="block md:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
+                className="rounded p-2 transition  bg-gray-800 text-white hover:text-white/75"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

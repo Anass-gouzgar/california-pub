@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const Map = () => {
   return (
-    <section id="à_propos" className="dark:bg-slate-900">
+    <section id="à_propos" className="bg-slate-900">
       <div className="mx-auto max-w-screen-2xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 ">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
           {/* map section */}
@@ -22,11 +22,11 @@ const Map = () => {
           </div>
           {/* description */}
           <div className="lg:py-24 p-4 rounded-2xl bg-black/50">
-            <h2 className="dark:text-white text-3xl font-bold sm:text-4xl text-center sm:text-start">
+            <h2 className="text-white text-3xl font-bold sm:text-4xl text-center sm:text-start">
               Développez votre public
             </h2>
 
-            <p className="mt-4 text-xl dark:text-white">
+            <p className="mt-4 text-xl text-white">
               Chez{" "}
               <span className="text-mainYellowColor text-2xl font-bold">
                 California Pub
@@ -39,7 +39,7 @@ const Map = () => {
 
             <Link
               href="#"
-              className="text-lg mt-8 inline-block rounded bg-mainYellowColor px-12 py-3 font-medium darktext-black transition hover:bg-amber-300 focus:outline-none focus:ring hover:scale-105 duration-300 focus:ring-red-700"
+              className="text-lg mt-8 inline-block rounded bg-mainYellowColor px-12 py-3 font-medium transition hover:bg-amber-300 focus:outline-none focus:ring hover:scale-105 duration-300 focus:ring-red-700"
             >
               Commencez aujourd'hui
             </Link>

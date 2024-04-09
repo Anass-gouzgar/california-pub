@@ -17,7 +17,7 @@ const Hero = () => {
           </span>
         </h2>
 
-        <p className="sm:text-2xl  md:mt-4 md:block text-white">
+        <p className="sm:text-2xl md:mt-4 md:block text-white">
           Notre engagement envers l'excellence transforme chaque projet en une
           expérience inoubliable. Commencez votre voyage vers l'excellence avec
           une consultation personnalisée dès aujourd'hui.

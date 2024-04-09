@@ -12,10 +12,10 @@ const index = () => {
   const Images = [logo1, logo2, logo3, logo4, logo5, logo6];
 
   return (
-    <section className="flex flex-col justify-center items-center gap-16 dark:bg-gray-900 bg-gray-600 p-14 partBg">
+    <section className="flex flex-col justify-center items-center gap-16 bg-gray-900  p-14 partBg">
       {/* title */}
       <h1 className="md:text-4xl text-3xl text-center font-bold w-full text-white">
-        Nos Partenaires
+        il nous font confiance
       </h1>
       {/* logos */}
       <div className="flex items-center justify-center w-full md:max-w-[1000px]">
