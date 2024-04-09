@@ -43,8 +43,8 @@ const faqs = [
 
 
   return (
-    <div className="flex flex-col w-full mx-auto justify-center dark:bg-slate-900 p-6 pt-14 secBg">
-      <h1 className="text-center md:text-4xl text-3xl font-bold text-black dark:text-white">
+    <div className="flex flex-col w-full mx-auto justify-center bg-slate-900 p-6 pt-14 secBg">
+      <h1 className="text-center md:text-4xl text-3xl font-bold text-white">
         FAQ
       </h1>
       <div className="w-full md:w-1/2 md:p-10 p-2 flex flex-col gap-3 mx-auto">
@@ -54,7 +54,7 @@ const faqs = [
             key={index}
             className="group [&_summary::-webkit-details-marker]:hidden"
           >
-            <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900 dark:bg-gray-700 dark:text-white">
+            <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg p-4 bg-gray-700 text-white">
               <h2 className="font-medium">{faq.question}</h2>
               <svg
                 className="size-5 shrink-0 transition duration-1000 group-open:-rotate-180"
@@ -71,7 +71,7 @@ const faqs = [
                 />
               </svg>
             </summary>
-            <p className="mt-4 p-4 leading-relaxed text-gray-700 dark:text-gray-200 transition duration-[3000] border border-mainYellowColor rounded-xl bg-slate ">
+            <p className="mt-4 p-4 leading-relaxed text-gray-200 transition duration-[3000] border border-mainYellowColor rounded-xl bg-slate ">
               {faq.answer}
             </p>
           </details>

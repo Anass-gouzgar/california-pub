@@ -93,8 +93,8 @@ const RawMaterials = () => {
       className="bg-slate-900 flex flex-col items-center mx-auto relative sm:px-5 px-10 z-0"
     >
       {/* header */}
-      <header className="text-center pt-5 z-10 text-white">
-        <div className="text-3xl font-bold pt-1 px-6 w-[80%g] mx-auto mb-14 ">
+      <header className="text-center pt-5 md:mb-10 z-10 text-white">
+        <div className="md:text-4xl text-3xl text-center font-bold w-full text-white">
           Matières premières
         </div>
       </header>

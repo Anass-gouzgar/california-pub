@@ -7,7 +7,13 @@ import scrollTop from '@/public/assets/images/scroll-top-icon.svg'
 const Footer = () => {
 
 let currentYear = new Date().getFullYear();
-
+// services data
+const services = [
+  "Services d'Impression",
+  "Solutions Publicitaires",
+  "Découpe Laser",
+  "Routage CNC",
+];
 
 
   return (
@@ -33,11 +39,11 @@ let currentYear = new Date().getFullYear();
 
               <Link
                 href="tel:+212768049725"
-                className="flex gap-3 text-2xl font-medium text-gray-900 hover:opacity-75 sm:text-3xl dark:text-white "
+                className="flex gap-3 text-2xl font-medium hover:opacity-75 sm:text-3xl text-white "
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="size-8 shrink-0 text-white dark:text-gray hover:-translate-y-1 duration-300 "
+                  className="size-8 shrink-0 text-white text-gray hover:-translate-y-1 duration-300 "
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -55,17 +61,17 @@ let currentYear = new Date().getFullYear();
               </Link>
             </div>
 
-            <div className="mt-8 space-y-1 text-sm text-gray-700 dark:text-gray-200">
+            <div className="mt-8 space-y-1 text-sm text-gray-200">
               <h2>Lundi à Vendredi: 10:00 - 20:00</h2>
               <h2>Weekend: 10:00 - 18:00</h2>
             </div>
             {/* social media icons */}
             <div className="mt-8 flex gap-6  ">
               <Link
-                href="#"
+                href="https://www.facebook.com/profile.php?id=100069538042688&mibextid=eQY6cl"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 hover:opacity-75 hover:-translate-y-1 duration-300 dark:text-gray-200"
+                className="hover:opacity-75 hover:-translate-y-1 duration-300 text-gray-200"
               >
                 <span className="sr-only">Facebook</span>
 
@@ -87,7 +93,7 @@ let currentYear = new Date().getFullYear();
                 href="https://www.instagram.com/california.pub5/"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 transition hover:opacity-75 dark:text-gray-200 hover:-translate-y-1 duration-300"
+                className=" transition hover:opacity-75 text-gray-200 hover:-translate-y-1 duration-300"
               >
                 <span className="sr-only">Instagram</span>
 
@@ -108,52 +114,34 @@ let currentYear = new Date().getFullYear();
           </div>
           {/* sec two col */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 ">
-            {/* first col */}
+            {/* first col - services */}
             <div className="">
-              <h1 className="text-lg font-bold text-gray-900 dark:text-white">
+              <h1 className="text-lg font-bold text-gray-900 text-white">
                 Nos Services <br /> Principaux
               </h1>
-
               <div className="mt-6 space-y-4 text-sm flex flex-col justify-center">
-                <Link
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
-                >
-                  Services d'Impression
-                </Link>
-
-                <Link
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
-                >
-                  Solutions Publicitaires
-                </Link>
-
-                <Link
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
-                >
-                  Découpe Laser
-                </Link>
-
-                <Link
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
-                >
-                  Routage CNC
-                </Link>
+                {services.map((service, index) => (
+                  <div
+                    key={index}
+                    href="#"
+                    className=" transition hover:opacity-75 text-gray-200 hover:cursor-pointer"
+                  >
+                    {service}
+                  </div>
+                ))}
               </div>
+              );
             </div>
             {/* sec col */}
             <div className=" flex flex-col">
-              <p className="text-lg font-bold text-gray-900 dark:text-white">
+              <p className="text-lg font-bold  text-white">
                 À Propos de Notre Entreprise
               </p>
 
               <div className="mt-6 space-y-4 text-sm flex flex-col">
                 <Link
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  href="#contact"
+                  className=" transition hover:opacity-75 text-gray-200"
                 >
                   Contactez-Nous
                 </Link>
@@ -165,12 +153,18 @@ let currentYear = new Date().getFullYear();
         <div className="mt-12 border-t  pt-12border-gray-800">
           <div className="flex flex-col gap-2 items-center justify-center">
             {/* go to top  */}
-              <Link
-                href="#top"
-                className="bg-mainYellowColor p-1 mt-3 rounded-full w-10 h-10 text-center cursor-pointer flex justify-center items-cente  transition hover:opacity-75 hover:scale-100 duration-3y00"
-              >
-                <Image src={scrollTop} alt="go to top" width={16} height={16} className='text-white' />
-              </Link>
+            <Link
+              href="#top"
+              className="bg-mainYellowColor p-1 mt-3 rounded-full w-10 h-10 text-center cursor-pointer flex justify-center items-cente  transition hover:opacity-75 hover:scale-100 duration-3y00"
+            >
+              <Image
+                src={scrollTop}
+                alt="go to top"
+                width={16}
+                height={16}
+                className="text-white w-auto h-auto"
+              />
+            </Link>
             <p className="mt-8 text-sm sm:mt-0 text-gray-400">
               &copy; {currentYear}. California Pub. All rights reserved.
             </p>
