@@ -94,7 +94,11 @@ const NousContacter = () => {
   };
 
   return (
-    <div id="contact" className="w-full flex justify-center items-center bg-slate-900">
+    <div
+      id="contact"
+      className="w-full flex justify-center items-center bg-slate-900"
+    >
+      {" "}
       <div className="md:w-[40%] w-full flex flex-col gap-y-14 p-16 pb-10d">
         <ToastContainer />
 
@@ -110,7 +114,11 @@ const NousContacter = () => {
           </p> */}
           </div>
           {/* form */}
-          <form onSubmit={handleSubmit} className="flex flex-col gap-7 mt-10">
+          <form
+            onSubmit={handleSubmit}
+            data-aos="fade-up"
+            className="flex flex-col gap-7 mt-10"
+          >
             {/* First Row */}
             <div className="flex flex-col justify-between md:flex-row gap-7">
               <div className="flex flex-col w-full md:w-1/2 gap-1">
@@ -128,7 +136,7 @@ const NousContacter = () => {
                   className="bg-black/35  text-white text-sm border-b border-Gray focus:placgeholder:text-mainYellowColor focus:border-mainYellowColor outline-none py-2"
                   value={data.full_name}
                   onChange={handleChange}
-                //   required
+                  //   required
                 />
                 {errors.full_name && (
                   <span className="text-red-500 text-sm">
@@ -152,7 +160,7 @@ const NousContacter = () => {
                   className="text-sm border-b border-Gray bg-black/35  text-white  focus:placehodlder:text-mainYellowColor focus:border-mainYellowColor outline-none py-2"
                   value={data.entreprise}
                   onChange={handleChange}
-                //   required
+                  //   required
                 />
                 {errors.entreprise && (
                   <span className="text-red-500 text-sm">
@@ -180,7 +188,7 @@ const NousContacter = () => {
                   className="bg-black/35  text-white text-sm border-b border-Gray focus:placgeholder:text-mainYellowColor focus:border-mainYellowColor outline-none py-2"
                   value={data.email}
                   onChange={handleChange}
-                //   required
+                  //   required
                 />
                 {errors.email && (
                   <span className="text-red-500 text-sm"> {errors.email} </span>
@@ -201,7 +209,7 @@ const NousContacter = () => {
                   className="bg-black/35  text-white text-sm border-b border-Gray focus:placgeholder:text-mainYellowColor focus:border-mainYellowColor outline-none py-2"
                   value={data.phone_nbr}
                   onChange={handleChange}
-                //   required
+                  //   required
                 />
                 {errors.phone_nbr && (
                   <span className="text-red-500 text-sm">
@@ -229,7 +237,7 @@ const NousContacter = () => {
                   value={data.message}
                   onChange={handleChange}
                   rows={5}
-                //   required
+                  //   required
                 />
                 {errors.message && (
                   <span className="text-red-500 text-sm">
@@ -243,6 +251,7 @@ const NousContacter = () => {
             {/* button envoyer */}
             <div className="text-center md:text-justify">
               <input
+                data-aos="fade-up"
                 type="submit"
                 value={loading ? "Envoi ..." : "Envoyer"}
                 className="mt-5 bg-gradient-to-r bg-mainYellowColor w-full max-w-[300px] text-lg text-center text-black py-2 rounded-[10px] hover:opacity-90 cursor-pointer"

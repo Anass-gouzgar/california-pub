@@ -21,6 +21,7 @@ const services = [
       {/* img */}
       <div className="relative block h-32 lg:col-span-2 lg:h-full">
         <Image
+          data-aos="zoom-in-left"
           src={img}
           alt="footer img"
           className="absolute inset-0 h-full w-full object-cover"
@@ -130,7 +131,6 @@ const services = [
                   </div>
                 ))}
               </div>
-              );
             </div>
             {/* sec col */}
             <div className=" flex flex-col">
@@ -150,7 +150,7 @@ const services = [
           </div>
         </div>
 
-        <div className="mt-12 border-t  pt-12border-gray-800">
+        <div className="mt-12 border-t  pt-12 ">
           <div className="flex flex-col gap-2 items-center justify-center">
             {/* go to top  */}
             <Link
@@ -158,6 +158,7 @@ const services = [
               className="bg-mainYellowColor p-1 mt-3 rounded-full w-10 h-10 text-center cursor-pointer flex justify-center items-cente  transition hover:opacity-75 hover:scale-100 duration-3y00"
             >
               <Image
+                data-aos="zoom-in-up"
                 src={scrollTop}
                 alt="go to top"
                 width={16}
@@ -165,7 +166,10 @@ const services = [
                 className="text-white w-auto h-auto"
               />
             </Link>
-            <p className="mt-8 text-sm sm:mt-0 text-gray-400">
+            <p
+              className="mt-8 text-sm sm:mt-0 text-gray-400"
+            >
+              {" "}
               &copy; {currentYear}. California Pub. All rights reserved.
             </p>
           </div>

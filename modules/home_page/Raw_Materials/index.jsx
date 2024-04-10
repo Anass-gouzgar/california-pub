@@ -102,12 +102,15 @@ const RawMaterials = () => {
       {/* aside */}
       <div className="relative flex md:flex-row flex-col flex-nowrap w-full max-w-[1400px] z-10 bg-red-500l overflow-hidden">
         {/* text nd buttons */}
-        <div className="max-w-xli md:min-w-[60%] text-center md:text-start w-full flex flex-col gap-y-3 md:p-16 p-3 items-center md:items-start justify-center bg-blue-600l">
+        <div
+          data-aos="zoom-in-up"
+          className="max-w-xli md:min-w-[60%] text-center md:text-start w-full flex flex-col gap-y-3 md:p-16 p-3 items-center md:items-start justify-center bg-blue-600l"
+        >
+          {" "}
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl hidden md:block">
             Expertise en Fabrication Multimatériaux pour des Produits de Haute
             Qualité{" "}
           </h2>
-
           <p className=" text-white ">
             Nous travaillons sur une variété de matières premières pour la
             fabrication, allant du bois aux métaux en passant par les matières
@@ -115,10 +118,12 @@ const RawMaterials = () => {
             sommes en mesure de satisfaire pleinement nos clients en leur
             fournissant produits de haute qualité.
           </p>
-
           {/* nav buttons */}
           <div className="bg-yellow-300l flex gap-2 mx-auto md:mx-0 ">
             <button
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
               onClick={() => swiper.slidePrev()}
               type="button"
               className=" min-w-[50px] min-h-[50px] size-[50px] bg-white flex justify-center items-center rounded-full hover:opacity-90  hover:scale-110 "
@@ -130,6 +135,9 @@ const RawMaterials = () => {
               />
             </button>
             <button
+              data-aos="flip-right"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
               onClick={() => swiper.slideNext()}
               type="button"
               className=" min-w-[50px] min-h-[50px] size-[50px] bg-white flex justify-center items-center rounded-full hover:opacity-90 hover:scale-110"
@@ -140,7 +148,12 @@ const RawMaterials = () => {
         </div>
 
         {/* slider */}
-        <div className="p-3 flex flex-cold justify-center items-center gap-20e bg-slate-800 md:w-[70%] rounded-2xl">
+        <div
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          className="p-3 flex flex-cold justify-center items-center gap-20e bg-slate-800 md:w-[70%] rounded-2xl"
+        >
+          {" "}
           <Swiper
             spaceBetween={0}
             loop={true}

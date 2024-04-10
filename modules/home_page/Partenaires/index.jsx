@@ -18,10 +18,14 @@ const index = () => {
         il nous font confiance
       </h1>
       {/* logos */}
-      <div className="flex items-center justify-center w-full md:max-w-[1000px]">
+      <div
+        data-aos="zoom-out-up"
+        className="flex items-center justify-center w-full md:max-w-[1000px]"
+      >
+        {" "}
         <Marquee speed={50} pauseOnHover={false}>
           {Images.map((image, i) => (
-            <div key={i} className="mr-16 p-2">
+            <div key={i} className="mr-6 md:mr-14 p-2">
               <Image
                 src={image}
                 alt={`logo-${i}`}
