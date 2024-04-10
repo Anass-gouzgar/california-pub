@@ -98,6 +98,7 @@ const NousContacter = () => {
       id="contact"
       className="w-full flex justify-center items-center bg-slate-900"
     >
+
       <div className="md:w-[40%] w-full flex flex-col gap-y-14 p-16 pb-10d">
         <ToastContainer />
 
@@ -114,8 +115,9 @@ const NousContacter = () => {
           </div>
           {/* form */}
           <form
-            data-aos="fade-up"
             onSubmit={handleSubmit}
+            data-aos="fade-up"
+
             className="flex flex-col gap-7 mt-10"
           >
             {/* First Row */}
@@ -250,6 +252,7 @@ const NousContacter = () => {
             {/* button envoyer */}
             <div className="text-center md:text-justify">
               <input
+                data-aos="fade-up"
                 type="submit"
                 value={loading ? "Envoi ..." : "Envoyer"}
                 className="mt-5 bg-gradient-to-r bg-mainYellowColor w-full max-w-[300px] text-lg text-center text-black py-2 rounded-[10px] hover:opacity-90 cursor-pointer"

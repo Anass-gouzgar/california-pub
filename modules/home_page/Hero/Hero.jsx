@@ -18,19 +18,18 @@ const Hero = () => {
         data-aos-easing="ease-in-sine"
         className="flex flex-col justify-end md:justify-center mx-auto max-w-xl md:gap-6 md:h-[80%] "
       >
+
         <h2 className=" text-2xl font-bold  md:text-5xl text-white">
           Bienvenue sur <br />
           <span className="text-6xl font-bold text-mainYellowColor">
             California Pub
           </span>
         </h2>
-
         <p className="sm:text-2xl md:mt-4 md:block text-white">
           Notre engagement envers l'excellence transforme chaque projet en une
           expérience inoubliable. Commencez votre voyage vers l'excellence avec
           une consultation personnalisée dès aujourd'hui.
         </p>
-
         <div className="flex gap-4 mt-4 md:mt-8">
           <Link
             href="#Services"

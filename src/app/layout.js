@@ -1,12 +1,12 @@
-'use client';
-import { React, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+'use client'
+
 import { Inter } from "next/font/google";
 import Head from "next/head"; // Import the Head component
 import "./globals.css";
 import Link from "next/link";
-
+import { React, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const inter = Inter({ subsets: ["latin"] });
 
 const metadata = {
@@ -18,12 +18,14 @@ const metadata = {
   ogUrl: "https://californiapublicite.ma",
 };
 
-export default function RootLayout({ children }) { useEffect(() => {
-   AOS.init({
-     duration: 800,
-     once: false,
-   });
- }, []);
+export default function RootLayout({ children }) {
+   useEffect(() => {
+     AOS.init({
+       duration: 800,
+       once: false,
+     });
+   }, []);
+
   return (
     <html lang="fr">
       <Head>

@@ -112,7 +112,6 @@ const RawMaterials = () => {
             Expertise en Fabrication Multimatériaux pour des Produits de Haute
             Qualité{" "}
           </h2>
-
           <p className=" text-white ">
             Nous travaillons sur une variété de matières premières pour la
             fabrication, allant du bois aux métaux en passant par les matières
@@ -120,7 +119,6 @@ const RawMaterials = () => {
             sommes en mesure de satisfaire pleinement nos clients en leur
             fournissant produits de haute qualité.
           </p>
-
           {/* nav buttons */}
           <div className="bg-yellow-300l flex gap-2 mx-auto md:mx-0 ">
             <button
@@ -156,6 +154,7 @@ const RawMaterials = () => {
           data-aos-anchor-placement="bottom-bottom"
           className="p-3 flex flex-cold justify-center items-center gap-20e bg-slate-800 md:w-[70%] rounded-2xl"
         >
+
           <Swiper
             spaceBetween={0}
             loop={true}

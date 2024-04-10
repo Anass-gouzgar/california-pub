@@ -43,13 +43,11 @@ const faqs = [
 
 
   return (
-    <div
-      className="flex flex-col w-full mx-auto justify-center bg-slate-900 p-6 pt-14 secBg"
-    >
-      <h1
-        data-aos="zoom-in-lefèt"
-        className="text-center md:text-4xl text-3xl font-bold text-white"
-      >
+    <div className="flex flex-col w-full mx-auto justify-center bg-slate-900 p-6 pt-14 secBg">
+      {" "}
+      <h1 className="text-center md:text-4xl text-3xl font-bold text-white">
+
+
         FAQ
       </h1>
       <div

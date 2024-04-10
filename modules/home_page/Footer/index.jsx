@@ -26,6 +26,7 @@ const services = [
         className="relative block h-32 lg:col-span-2 lg:h-full"
       >
         <Image
+          data-aos="zoom-in-left"
           src={img}
           alt="footer img"
           className="absolute inset-0 h-full w-full object-cover"
@@ -154,7 +155,8 @@ const services = [
           </div>
         </div>
 
-        <div className="mt-12 border-t  md:pt-12 ">
+        <div className="mt-12 border-t  pt-12 ">
+
           <div className="flex flex-col gap-2 items-center justify-center">
             {/* go to top  */}
             <Link
@@ -171,8 +173,9 @@ const services = [
               />
             </Link>
             <p
-              data-aos="zoom-in-up"
               className="mt-8 text-sm sm:mt-0 text-gray-400"
+            >
+
             >
               &copy; {currentYear}. California Pub. All rights reserved.
             </p>
