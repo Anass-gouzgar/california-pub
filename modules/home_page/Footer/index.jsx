@@ -176,7 +176,7 @@ const services = [
               className="mt-8 text-sm sm:mt-0 text-gray-400"
             >
 
-            >
+            
               &copy; {currentYear}. California Pub. All rights reserved.
             </p>
           </div>
