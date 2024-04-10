@@ -7,9 +7,17 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section id="Acceuil" className=" h-auto grid md:grid-cols-2 p-44 bg-slate-900 pt-32 sm:pt-44 mainBg px-6 py-24g pb-44 gap-5 sm:p-10 ">
+    <section
+      id="Acceuil"
+      className=" h-auto grid md:grid-cols-2 p-44 bg-slate-900 pt-32 sm:pt-44 mainBg px-6 py-24g pb-44 gap-5 sm:p-10 "
+    >
       {/* hero description */}
-      <div className="flex flex-col justify-end md:justify-center mx-auto max-w-xl md:gap-6 md:h-[80%] ">
+      <div
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        className="flex flex-col justify-end md:justify-center mx-auto max-w-xl md:gap-6 md:h-[80%] "
+      >
         <h2 className=" text-2xl font-bold  md:text-5xl text-white">
           Bienvenue sur <br />
           <span className="text-6xl font-bold text-mainYellowColor">
@@ -39,7 +47,11 @@ const Hero = () => {
         </div>
       </div>
       {/* machine image */}
-      <div className="hidden md:flex h-[80%] pt-14 rounded-xl ovetrflow-hidden ">
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
+        className="hidden md:flex h-[80%] pt-14 rounded-xl ovetrflow-hidden "
+      >
         <Image
           alt="machine cnc"
           src={img}
