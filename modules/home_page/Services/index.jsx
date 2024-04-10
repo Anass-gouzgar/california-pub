@@ -94,10 +94,13 @@ const Services = () => {
           </p> */}
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-8  md:grid-cols-2 lg:grid-cols-3">
+        <div
+
+          className="mt-8 grid grid-cols-1 gap-8  md:grid-cols-2 lg:grid-cols-3"
+        >
           {/* Mapper à travers les données des services et utiliser le composant ServiceCard */}
           {servicesData.map((service, index) => (
-            <ServiceCard
+            <ServiceCard         
               key={index}
               title={service.title}
               description={service.description}

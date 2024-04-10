@@ -1,4 +1,5 @@
 'use client'
+
 import { Inter } from "next/font/google";
 import Head from "next/head"; // Import the Head component
 import "./globals.css";
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
        once: false,
      });
    }, []);
+
   return (
     <html lang="fr">
       <Head>

@@ -22,7 +22,6 @@ const index = () => {
         data-aos="zoom-out-up"
         className="flex items-center justify-center w-full md:max-w-[1000px]"
       >
-        {" "}
         <Marquee speed={50} pauseOnHover={false}>
           {Images.map((image, i) => (
             <div key={i} className="mr-6 md:mr-14 p-2">

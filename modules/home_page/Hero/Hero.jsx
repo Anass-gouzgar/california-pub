@@ -18,7 +18,7 @@ const Hero = () => {
         data-aos-easing="ease-in-sine"
         className="flex flex-col justify-end md:justify-center mx-auto max-w-xl md:gap-6 md:h-[80%] "
       >
-        {" "}
+
         <h2 className=" text-2xl font-bold  md:text-5xl text-white">
           Bienvenue sur <br />
           <span className="text-6xl font-bold text-mainYellowColor">

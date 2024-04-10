@@ -98,7 +98,7 @@ const NousContacter = () => {
       id="contact"
       className="w-full flex justify-center items-center bg-slate-900"
     >
-      {" "}
+
       <div className="md:w-[40%] w-full flex flex-col gap-y-14 p-16 pb-10d">
         <ToastContainer />
 
@@ -117,6 +117,7 @@ const NousContacter = () => {
           <form
             onSubmit={handleSubmit}
             data-aos="fade-up"
+
             className="flex flex-col gap-7 mt-10"
           >
             {/* First Row */}

@@ -10,7 +10,7 @@ const ServiceCard = ({ title, description, image, link }) => {
       data-aos-anchor-placement="bottom-bottom"
       className="h-auto relative overflow-hidden bg-black rounded-lg hover:shadow-lg shadow-xl transition hover:border-slate-500 hover:shadow-amber-300"
     >
-      {" "}
+
       <Image
         src={image}
         alt={title}

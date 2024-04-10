@@ -9,7 +9,9 @@ import chevronIcon from "../../../public/assets/images/chevron-right.svg";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/pagination";
 
 
 
@@ -106,7 +108,6 @@ const RawMaterials = () => {
           data-aos="zoom-in-up"
           className="max-w-xli md:min-w-[60%] text-center md:text-start w-full flex flex-col gap-y-3 md:p-16 p-3 items-center md:items-start justify-center bg-blue-600l"
         >
-          {" "}
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl hidden md:block">
             Expertise en Fabrication Multimatériaux pour des Produits de Haute
             Qualité{" "}
@@ -153,10 +154,13 @@ const RawMaterials = () => {
           data-aos-anchor-placement="bottom-bottom"
           className="p-3 flex flex-cold justify-center items-center gap-20e bg-slate-800 md:w-[70%] rounded-2xl"
         >
-          {" "}
+
           <Swiper
             spaceBetween={0}
             loop={true}
+            modules={[Pagination]}
+            // pagination={true}
+
             autoplay={{
               delay: 2500,
               disableOnInteraction: true,
@@ -179,7 +183,7 @@ const RawMaterials = () => {
             {cardsData.map((card, index) => (
               <SwiperSlide
                 key={index}
-                className="mt-10f md:pt-32 bg-yellow-400k flex items-center justify-center"
+                className="mt-10f md:pt-32 bg-yellow-400l flex items-center justify-center"
               >
                 <Card
                   title={card.title}
