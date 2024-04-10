@@ -20,13 +20,13 @@ const services = [
     <footer id="footer" className=" lg:grid lg:grid-cols-5 bg-slate-900">
       {/* img */}
       <div
-        data-aos="zoom-out"
+        // data-aos="zoom-out"
         data-aos-easing="linear"
         data-aos-duration="1000"
         className="relative block h-32 lg:col-span-2 lg:h-full"
       >
         <Image
-          data-aos="zoom-in-left"
+          // data-aos="zoom-in-left"
           src={img}
           alt="footer img"
           className="absolute inset-0 h-full w-full object-cover"
