@@ -1,3 +1,7 @@
+'use client';
+import { React, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Inter } from "next/font/google";
 import Head from "next/head"; // Import the Head component
 import "./globals.css";
@@ -5,7 +9,7 @@ import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+const metadata = {
   title: "California Pub",
   description:
     "Notre engagement envers l'excellence transforme chaque projet en une expérience inoubliable. Commencez votre voyage vers l'excellence avec une consultation personnalisée dès aujourd'hui.",
@@ -14,7 +18,12 @@ export const metadata = {
   ogUrl: "https://californiapublicite.ma",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }) { useEffect(() => {
+   AOS.init({
+     duration: 800,
+     once: false,
+   });
+ }, []);
   return (
     <html lang="fr">
       <Head>

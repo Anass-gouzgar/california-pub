@@ -5,7 +5,11 @@ import Link from "next/link";
 
 const ServiceCard = ({ title, description, image, link }) => {
   return (
-    <article className="h-auto relative overflow-hidden bg-black rounded-lg hover:shadow-lg shadow-xl transition hover:border-slate-500 hover:shadow-amber-300">
+    <article
+      data-aos="fade-up"
+      data-aos-anchor-placement="bottom-bottom"
+      className="h-auto relative overflow-hidden bg-black rounded-lg hover:shadow-lg shadow-xl transition hover:border-slate-500 hover:shadow-amber-300"
+    >
       <Image
         src={image}
         alt={title}

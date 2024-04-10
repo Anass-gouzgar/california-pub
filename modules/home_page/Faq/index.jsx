@@ -43,14 +43,22 @@ const faqs = [
 
 
   return (
-    <div className="flex flex-col w-full mx-auto justify-center bg-slate-900 p-6 pt-14 secBg">
-      <h1 className="text-center md:text-4xl text-3xl font-bold text-white">
+    <div
+      className="flex flex-col w-full mx-auto justify-center bg-slate-900 p-6 pt-14 secBg"
+    >
+      <h1
+        data-aos="zoom-in-lefèt"
+        className="text-center md:text-4xl text-3xl font-bold text-white"
+      >
         FAQ
       </h1>
-      <div className="w-full md:w-1/2 md:p-10 p-2 flex flex-col gap-3 mx-auto">
+      <div
+        className="w-full md:w-1/2 md:p-10 p-2 flex flex-col gap-3 mx-auto"
+      >
         {/* Map through the FAQ data */}
         {faqs.map((faq, index) => (
           <details
+            data-aos="zoom-in-left"
             key={index}
             className="group [&_summary::-webkit-details-marker]:hidden"
           >

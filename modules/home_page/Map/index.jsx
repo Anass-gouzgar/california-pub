@@ -8,7 +8,12 @@ const Map = () => {
       <div className="mx-auto max-w-screen-2xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 ">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
           {/* map section */}
-          <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-first order-last lg:h-full">
+          <div
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-first order-last lg:h-full"
+          >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d610.2025949542422!2d-9.553810299680501!3d30.099136525864036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sma!4v1712451356559!5m2!1sen!2sma"
               width="100%"
@@ -21,7 +26,13 @@ const Map = () => {
             ></iframe>
           </div>
           {/* description */}
-          <div className="lg:py-24 p-4 rounded-2xl bg-black/50">
+          <div
+            data-aos="fade-left"
+            // data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="500"
+            className="lg:py-24 p-4 rounded-2xl bg-black/50"
+          >
             <h2 className="text-white text-3xl font-bold sm:text-4xl text-center sm:text-start">
               Développez votre public
             </h2>
