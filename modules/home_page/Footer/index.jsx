@@ -127,13 +127,13 @@ const services = [
               </h1>
               <div className="mt-6 space-y-4 text-sm flex flex-col justify-center">
                 {services.map((service, index) => (
-                  <div
+                  <Link
                     key={index}
-                    href="#"
+                    href="#Services"
                     className=" transition hover:opacity-75 text-gray-200 hover:cursor-pointer"
                   >
                     {service}
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -156,7 +156,6 @@ const services = [
         </div>
 
         <div className="mt-12 border-t  pt-12 ">
-
           <div className="flex flex-col gap-2 items-center justify-center">
             {/* go to top  */}
             <Link
@@ -172,12 +171,8 @@ const services = [
                 className="text-white w-auto h-auto"
               />
             </Link>
-            <p
-              className="mt-8 text-sm sm:mt-0 text-gray-400"
-            >
-
-            
-              &copy; {currentYear}. California Pub. All rights reserved.
+            <p className="mt-8 text-sm sm:mt-0 text-gray-400">
+              &copy; {currentYear}. California Pub. Tous droits réservés.
             </p>
           </div>
         </div>
