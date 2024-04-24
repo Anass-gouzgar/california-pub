@@ -1,20 +1,18 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import img from "@/public/assets/images/footer_img.jpg"
-import scrollTop from '@/public/assets/images/scroll-top-icon.svg'
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import img from "@/public/assets/images/footer_img.jpg";
+import scrollTop from "@/public/assets/images/scroll-top-icon.svg";
 
 const Footer = () => {
-
-let currentYear = new Date().getFullYear();
-// services data
-const services = [
-  "Services d'Impression",
-  "Solutions Publicitaires",
-  "Découpe Laser",
-  "Routage CNC",
-];
-
+  let currentYear = new Date().getFullYear();
+  // services data
+  const services = [
+    "Services d'Impression",
+    "Solutions Publicitaires",
+    "Découpe Laser",
+    "Routage CNC",
+  ];
 
   return (
     <footer id="footer" className=" lg:grid lg:grid-cols-5 bg-slate-900">
@@ -174,11 +172,20 @@ const services = [
             <p className="mt-8 text-sm sm:mt-0 text-gray-400">
               &copy; {currentYear}. California Pub. Tous droits réservés.
             </p>
+            <p className="mt-8 text-sm sm:mt-0 text-slate-800 hover:text-gray-400">
+              By{" "}
+              <Link
+                href="https://www.linkedin.com/in/anassgouzgar"
+                target="_blank"
+              >
+                Anass GOUZGAR{" "}
+              </Link>
+            </p>
           </div>
         </div>
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;
