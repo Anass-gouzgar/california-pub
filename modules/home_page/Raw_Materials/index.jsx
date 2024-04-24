@@ -119,8 +119,8 @@ const RawMaterials = () => {
             sommes en mesure de satisfaire pleinement nos clients en leur
             fournissant produits de haute qualité.
           </p>
-          {/* nav buttons */}
-          <div className="bg-yellow-300l flex gap-2 mx-auto md:mx-0 ">
+          {/* nav buttons for desktop */}
+          <div className="hidden md:flex  gap-2 mx-auto md:mx-0 ">
             <button
               data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
@@ -195,6 +195,33 @@ const RawMaterials = () => {
             ))}
           </Swiper>
         </div>
+                  {/* nav buttons for mobile */}
+          <div className=" lg:hidden flex gap-2 mx-auto md:mx-0 mb-5">
+            <button
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+              onClick={() => swiper.slidePrev()}
+              type="button"
+              className=" min-w-[50px] min-h-[50px] size-[50px] bg-white flex justify-center items-center rounded-full hover:opacity-90  hover:scale-110 "
+            >
+              <Image
+                src={chevronIcon}
+                className={`w-3 scale-x-[-1]`}
+                alt="chevron"
+              />
+            </button>
+            <button
+              data-aos="flip-right"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+              onClick={() => swiper.slideNext()}
+              type="button"
+              className=" min-w-[50px] min-h-[50px] size-[50px] bg-white flex justify-center items-center rounded-full hover:opacity-90 hover:scale-110"
+            >
+              <Image src={chevronIcon} className={`w-3`} alt="chevron" />
+            </button>
+          </div>
       </div>
     </div>
   );
