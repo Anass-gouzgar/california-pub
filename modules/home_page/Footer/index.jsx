@@ -1,8 +1,11 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import img from "@/public/assets/images/footer_img.jpg";
 import scrollTop from "@/public/assets/images/scroll-top-icon.svg";
+import { Link as ScrollLink } from "react-scroll";
+
 
 const Footer = () => {
   let currentYear = new Date().getFullYear();
@@ -18,13 +21,11 @@ const Footer = () => {
     <footer id="footer" className=" lg:grid lg:grid-cols-5 bg-slate-900">
       {/* img */}
       <div
-        // data-aos="zoom-out"
         data-aos-easing="linear"
         data-aos-duration="1000"
         className="relative block h-32 lg:col-span-2 lg:h-full"
       >
         <Image
-          // data-aos="zoom-in-left"
           src={img}
           alt="footer img"
           className="absolute inset-0 h-full w-full object-cover"
@@ -125,13 +126,17 @@ const Footer = () => {
               </h1>
               <div className="mt-6 space-y-4 text-sm flex flex-col justify-center">
                 {services.map((service, index) => (
-                  <Link
+                  <ScrollLink
+                    to="Services"
+                    spy={true}
+                    smooth={true}
+                    offset={-10}
+                    duration={500}
                     key={index}
-                    href="#Services"
                     className=" transition hover:opacity-75 text-gray-200 hover:cursor-pointer"
                   >
                     {service}
-                  </Link>
+                  </ScrollLink>
                 ))}
               </div>
             </div>
@@ -142,12 +147,16 @@ const Footer = () => {
               </p>
 
               <div className="mt-6 space-y-4 text-sm flex flex-col">
-                <Link
-                  href="#contact"
-                  className=" transition hover:opacity-75 text-gray-200"
+         <ScrollLink
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-10}
+                    duration={500}
+                  className="cursor-pointer transition hover:opacity-75 text-gray-200"
                 >
                   Contactez-Nous
-                </Link>
+                </ScrollLink>
               </div>
             </div>
           </div>
@@ -156,19 +165,24 @@ const Footer = () => {
         <div className="mt-12 border-t  pt-12 ">
           <div className="flex flex-col gap-2 items-center justify-center">
             {/* go to top  */}
-            <Link
-              href="#top"
-              className="bg-mainYellowColor p-1 mt-3 rounded-full w-10 h-10 text-center cursor-pointer flex justify-center items-cente  transition hover:opacity-75 hover:scale-100 duration-3y00"
+            <ScrollLink
+              to="Hero"
+              spy={true}
+              smooth={true}
+              offset={-10}
+              duration={500}
             >
-              <Image
-                data-aos="zoom-in-up"
-                src={scrollTop}
-                alt="go to top"
-                width={16}
-                height={16}
-                className="text-white w-auto h-auto"
-              />
-            </Link>
+              <div className="bg-mainYellowColor p-1 mt-3 rounded-full w-10 h-10 text-center cursor-pointer flex justify-center items-cente  transition hover:opacity-75 hover:scale-100 duration-3y00">
+                <Image
+                  data-aos="zoom-in-up"
+                  src={scrollTop}
+                  alt="go to top"
+                  width={16}
+                  height={16}
+                  className="text-white w-auto h-auto"
+                />
+              </div>
+            </ScrollLink>
             <p className="mt-8 text-sm sm:mt-0 text-gray-400">
               &copy; {currentYear}. California Pub. Tous droits réservés.
             </p>
