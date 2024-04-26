@@ -1,8 +1,8 @@
-"use client";
-
+"use client"
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 import Image from "next/image";
+import Link from "next/link"; // Importez Link de Next.js
 
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -27,44 +27,53 @@ const Header = () => {
 
   // Navigation data
   const navLinks = [
-    { name: "Acceuil", href: "" },
-    { name: "Services", href: "#Services" },
-    { name: "Matières premières ", href: "#matières_premières" },
-    // { name: "Projects", href: "#" },
-    { name: "Contact", href: "#contact" },
-    { name: "A propos", href: "#à_propos" },
+    { name: "Acceuil", href: "Hero" },
+    { name: "Services", href: "Services" },
+    { name: "Matières premières ", href: "matières_premières" },
+    { name: "Contact", href: "contact" },
+    { name: "A propos", href: "à_propos" },
   ];
 
   return (
     <header
-    id="top"
       className={`flex justify-center items-center mx-auto fixed top-0 left-0 right-0 z-10 ${headerClass}`}
     >
       <div className="mx-auto max-w-screhen-xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center gap-10  my-3 bg-yegllow-500">
+        <div className="flex h-16 items-center gap-10 my-3 bg-yegllow-500">
           {/* logo */}
           <div className="">
-            <Link href="/" className="block">
+            <ScrollLink
+               to="Hero"
+              spy={true}
+              smooth={true}
+              offset={-10}
+              duration={500}
+            >
               <Image
                 src="/assets/images/logo.png"
                 alt="logo"
                 width={200}
                 height={20}
-                className="h-auto w-auto object-cover"
+                className="h-auto w-auto object-cover cursor-pointer"
               />
-            </Link>
+            </ScrollLink>
           </div>
           {/* navigation links */}
           <div className="hidden md:block pt-3 ">
             <nav aria-label="Global">
               <div className="flex items-center gap-6 text-lg">
                 {navLinks.map((link, index) => (
-                    <Link key={index}
-                      href={link.href}
-                      className="relative text-gray-200 z-50 before:content-[''] before:absolute before:w-0 before:h-2 before:bg-mainYellowColor before:bottom-0 before:rounded-xl before:-z-10 hover:before:w-1/2 before:duration-300"
-                    >
-                      {link.name}
-                    </Link>
+                  <ScrollLink
+                    key={index}
+                    to={link.href}
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                    duration={500}
+                    className="relative cursor-pointer text-gray-200 z-50 before:content-[''] before:absolute before:w-0 before:h-2 before:bg-mainYellowColor before:bottom-0 before:rounded-xl before:-z-10 hover:before:w-1/2 before:duration-300"
+                  >
+                    {link.name}
+                  </ScrollLink>
                 ))}
               </div>
             </nav>
@@ -83,7 +92,7 @@ const Header = () => {
             <div className="block md:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="rounded p-2 transition  bg-gray-800 text-white hover:text-white/75"
+                className="rounded p-2 transition bg-gray-800 text-white hover:text-white/75"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -111,14 +120,17 @@ const Header = () => {
           <div className="absolute right-0 w-[90%] h-screen bg-slate-900/90 shadow-lg">
             <nav className="text-lg flex flex-col items-center justify-center h-full gap-4 py-4">
               {navLinks.map((link, index) => (
-                <Link
+                <ScrollLink
                   key={index}
-                  href={link.href}
-                  className="relative text-gray-500 hover:text-gray-500/75 z-50 before:content-[''] before:absolute before:w-0 before:h-2 before:bg-amber-500 before:bottom-0 before:rounded-xl before:-z-10 hover:before:w-1/2 before:duration-300"
+                  to={link.href}
+                  className="relative hover:cursor-wakit text-gray-500 hover:text-gray-500/75 z-50 before:content-[''] before:absolute before:w-0 before:h-2 before:bg-amber-500 before:bottom-0 before:rounded-xl before:-z-10 hover:before:w-1/2 before:duration-300"
                 >
-                  {link.name}
-                </Link>
-              ))}{" "}
+                  <button>
+                                      {link.name}
+
+                  </button>
+                </ScrollLink>
+              ))}
               <div className="sm:flex sm:gap-4">
                 <Link
                   href="tel:+212768049725"

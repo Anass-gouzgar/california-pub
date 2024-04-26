@@ -8,7 +8,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section
-      id="Acceuil"
+      id="Hero"
       className=" h-auto grid md:grid-cols-2 p-44 bg-slate-900 pt-32 sm:pt-44 mainBg px-6 py-24g pb-44 gap-5 sm:p-10 "
     >
       {/* hero description */}
