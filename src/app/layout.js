@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
    useEffect(() => {
      AOS.init({
        duration: 800,
-       once: false,
+       once: true,
      });
    }, []);
 
