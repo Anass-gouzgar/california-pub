@@ -1,9 +1,13 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import img from "../../../public/assets/images/cnc-router.png";
 import coc from "../../../public/assets/images/coc_2.png";
 import t from "../../../public/assets/images/t.png";
+import { Link as ScrollLink } from 'react-scroll';
 import Link from "next/link";
+
+
 
 const Hero = () => {
   return (
@@ -18,7 +22,6 @@ const Hero = () => {
         data-aos-easing="ease-in-sine"
         className="flex flex-col justify-end md:justify-center mx-auto max-w-xl md:gap-6 md:h-[80%] "
       >
-
         <h2 className=" text-2xl font-bold  md:text-5xl text-white">
           Bienvenue sur <br />
           <span className="text-6xl font-bold text-mainYellowColor">
@@ -31,18 +34,26 @@ const Hero = () => {
           une consultation personnalisée dès aujourd'hui.
         </p>
         <div className="flex gap-4 mt-4 md:mt-8">
-          <Link
-            href="#Services"
-            className="inline-block rounded bg-mainYellowColor px-6 py-3 text-sm font-bold text-black transition hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
+          <ScrollLink
+            to="Services"
+            spy={true}
+            smooth={true}
+            offset={-10}
+            duration={500}
+            className="inline-block cursor-pointer rounded bg-mainYellowColor px-6 py-3 text-sm font-bold text-black transition hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
           >
             Explorer Nos Services
-          </Link>
-          <Link
-            href="#contact"
-            className="inline-block rounded bg-mainYellowColor px-6 py-3 text-sm font-bold text-black transition hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
+          </ScrollLink>
+          <ScrollLink
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-10}
+            duration={500}
+            className="inline-block cursor-pointer rounded bg-mainYellowColor px-6 py-3 text-sm font-bold text-black transition hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
           >
             Contactez-nous Maintenant
-          </Link>
+          </ScrollLink>
         </div>
       </div>
       {/* machine image */}

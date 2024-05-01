@@ -98,7 +98,6 @@ const NousContacter = () => {
       id="contact"
       className="w-full flex justify-center items-center bg-slate-900"
     >
-
       <div className="md:w-[40%] w-full flex flex-col gap-y-14 p-16 pb-10d">
         <ToastContainer />
 
@@ -117,7 +116,6 @@ const NousContacter = () => {
           <form
             onSubmit={handleSubmit}
             data-aos="fade-up"
-
             className="flex flex-col gap-7 mt-10"
           >
             {/* First Row */}
@@ -234,7 +232,7 @@ const NousContacter = () => {
                   id="message"
                   name="message"
                   placeholder="Votre message ..."
-                  className="bg-black/35  text-white text-sm border-b border-Gray focus:plfaceholder:text-mainYellowColor focus:border-mainYellowColoroutline-none py-2"
+                  className="bg-black/35 focus:border-mainYellowColor outline-none text-white text-sm border-b border-Gray focus:plfaceholder:text-mainYellowColor focus:border-mainYellowColoroutline-none py-2"
                   value={data.message}
                   onChange={handleChange}
                   rows={5}
@@ -250,13 +248,16 @@ const NousContacter = () => {
             </div>
 
             {/* button envoyer */}
-            <div className="text-center md:text-justify">
-              <input
+            <div className="text-center md:text-justify ">
+              <span>
+                              <input
                 data-aos="fade-up"
                 type="submit"
                 value={loading ? "Envoi ..." : "Envoyer"}
-                className="mt-5 bg-gradient-to-r bg-mainYellowColor w-full max-w-[300px] text-lg text-center text-black py-2 rounded-[10px] hover:opacity-90 cursor-pointer"
+                className="hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out       mt-5   bg-gradient-to-r bg-mainYellowColor w-full max-w-[300px] text-lg text-center text-black py-2 rounded-[10px] hover:opacity-90 cursor-pointer"
               />
+              </span>
+
             </div>
           </form>
         </div>

@@ -1,5 +1,5 @@
+"use client";
 import React from "react";
-import Link from "next/link";
 import ServiceCard from "./_componets/index";
 import Graveur_sur_bois from "@/public/assets/images/services/service-Graver-sur-bois.jpg";
 import Cart_de_visite from "@/public/assets/images/services/service-Cart-de-visite.jpg";
@@ -10,6 +10,7 @@ import Graver_sur_marble from "@/public/assets/images/services/service-Graver-su
 import Services_dimpression from "@/public/assets/images/services/service-Services-d'impression.jpg";
 import Trophey_plexiglass from "@/public/assets/images/services/service-Trophey-plexiglass.jpg";
 import Immatricolaion from "@/public/assets/images/services/service-Immatricolaion.jpg";
+import { Link as ScrollLink } from "react-scroll";
 
 
 
@@ -21,56 +22,56 @@ const Services = () => {
       description:
         "Offrez une touche d'authenticité et d'élégance à vos projets avec notre service de gravure sur bois. Que ce soit pour des enseignes, des cadeaux personnalisés ou des décorations intérieures, notre expertise vous garantit des résultats remarquables.",
       image: Graveur_sur_bois,
-      link: "/#contact",
+      link: "contact",
     },
     {
       title: "Gravure sur marbre",
       description:
         "Ajoutez une dimension luxueuse à vos produits avec notre service de gravure sur marbre. Idéal pour les plaques commémoratives, les trophées ou les objets de décoration, cette technique apporte une touche sophistiquée à votre projet.",
       image: Graver_sur_marble,
-      link: "/#contact",
+      link: "contact",
     },
     {
       title: "Découpe laser et CNC router",
       description:
         "Profitez de notre technologie de pointe pour réaliser des découpes précises et complexes sur une variété de matériaux. Que ce soit pour des prototypes, des maquettes ou des pièces finales, notre équipement garantit une qualité exceptionnelle.",
       image: Découpe_laser,
-      link: "/#contact",
+      link: "contact",
     },
     {
       title: "Découpe vinyl",
       description:
         "Exprimez votre créativité avec notre service de découpe vinyl. Idéal pour les enseignes, les autocollants ou les décorations murales, cette technique offre une grande flexibilité pour des designs uniques et accrocheurs.",
       image: Decoupe_vinyle,
-      link: "/#contact",
+      link: "contact",
     },
     {
       title: "Services publicitaires",
       description:
         "Boostez votre visibilité avec nos services publicitaires sur mesure. De la conception de campagnes à la gestion des médias sociaux, nous vous aidons à atteindre votre public cible et à susciter l'engagement.",
       image: Services_publicitaires,
-      link: "/#contact",
+      link: "contact",
     },
     {
       title: "Services d'impression",
       description:
         "Faites impression avec nos services d'impression de haute qualité. Que ce soit pour des affiches, des brochures, des cartes de visite ou des bannières, notre équipement de pointe garantit des résultats professionnels à chaque fois.",
       image: Services_dimpression,
-      link: "/#contact",
+      link: "contact",
     },
     {
       title: "Trophées en plexiglass",
       description:
         "Le plexiglass offre de grandes possibilités pour la réalisation de trophées. Cette matière est largement utilisée pour des trophées dont la forme doit être adaptée grâce à une découpe laser. Transparent ou en couleur, d'épaisseurs différentes, le plexiglass garantit des trophées élégants et durables.",
       image: Trophey_plexiglass,
-      link: "/#contact",
+      link: "contact",
     },
     {
       title: "Cartes de visite",
       description:
         "Faites une bonne première impression avec nos cartes de visite professionnelles et personnalisées. Avec une variété de styles, de finitions et d'options de conception, nous vous aidons à vous démarquer dans le monde des affaires.",
       image: Cart_de_visite,
-      link: "/#contact",
+      link: "contact",
     },
 
     {
@@ -78,7 +79,7 @@ const Services = () => {
       description:
         "Nous vous offrons un service de fabrication professionnel de plaques d'immatriculation pour tous types de véhicules, avec une gamme étendue de matériaux et de designs personnalisés, garantissant des produits conformes aux normes et répondant à vos besoins spécifiques",
       image: Immatricolaion,
-      link: "/#contact",
+      link: "contact",
     },
   ];
 
@@ -111,13 +112,17 @@ const Services = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <Link
+          <ScrollLink
+               to="contact"
+              spy={true}
+              smooth={true}
+              offset={-10}
+              duration={500}
             data-aos="zoom-in-up"
-            href="#"
-            className="mt-8 inline-block rounded bg-mainYellowColor px-12 py-3 md:text-lg font-medium text-black transition hover:bg-amber-300 focus:outline-none focus:ring hover:scale-105 duration-300 focus:ring-red-700"
+            className="mt-8 cursor-pointer inline-block rounded bg-mainYellowColor px-12 py-3 md:text-lg font-medium text-black transition hover:bg-amber-300 focus:outline-none focus:ring hover:scale-105 duration-300 focus:ring-red-700"
           >
             Démarrer maintenant
-          </Link>
+          </ScrollLink>
         </div>
       </div>
     </section>

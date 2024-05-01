@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
+
 
 
 const ServiceCard = ({ title, description, image, link }) => {
@@ -26,10 +28,14 @@ const ServiceCard = ({ title, description, image, link }) => {
           <p className="mt-2 line-clamp-3 yhover:line-clamp-none text-lg/relaxed font-semibold text-white/95">
             {description}
           </p>
-          <Link
+          <ScrollLink
+              spy={true}
+              smooth={true}
+              offset={-10}
+              duration={500}
             data-aos="zoom-in-up"
-            href={link}
-            className="group mt-4 inline-flex items-center gap-1 hover:scale-125 text-sm font-medium text-mainYellowColor"
+            to={link}
+            className=" cursor-pointer group mt-4 inline-flex items-center gap-1 hover:scale-125 text-sm font-medium text-mainYellowColor"
           >
             En savoir plus
             <span
@@ -38,7 +44,7 @@ const ServiceCard = ({ title, description, image, link }) => {
             >
               &rarr;
             </span>
-          </Link>
+          </ScrollLink>
         </div>
       </div>
     </article>

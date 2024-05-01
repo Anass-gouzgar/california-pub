@@ -1,6 +1,6 @@
+"use client"
 import React from 'react'
-import Link from 'next/link'
-
+import { Link as ScrollLink } from 'react-scroll';
 
 const Map = () => {
   return (
@@ -45,12 +45,16 @@ const Map = () => {
               de publicité, de découpe laser ou de routage CNC, nous avons les
               solutions pour vous.
             </p>
-            <Link
-              href="#"
-              className="text-lg mt-8 inline-block rounded bg-mainYellowColor px-12 py-3 font-medium transition hover:bg-amber-300 focus:outline-none focus:ring hover:scale-105 duration-300 focus:ring-red-700"
+            <ScrollLink
+               to="contact"
+              spy={true}
+              smooth={true}
+              offset={-10}
+              duration={500}
+              className="text-lg cursor-pointer mt-8 inline-block rounded bg-mainYellowColor px-12 py-3 font-medium transition hover:bg-amber-300 focus:outline-none focus:ring hover:scale-105 duration-300 focus:ring-red-700"
             >
               Commencez aujourd'hui
-            </Link>
+            </ScrollLink>
           </div>
         </div>
       </div>
