@@ -61,7 +61,7 @@ const Hero = () => {
       <div
         data-aos="fade-up"
         data-aos-anchor-placement="bottom-bottom"
-        className="hidden h-[90%] sm:flex rounded-2xl overflow-hidden "
+        className="hidden h-[90%] sm:flex rounded-2xl overflow-hidden shadow-gray-400 shadow-lg"
       >
         <Image
           alt="machine cnc"
