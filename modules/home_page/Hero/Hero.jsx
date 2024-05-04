@@ -1,7 +1,8 @@
 'use client'
 import React from "react";
 import Image from "next/image";
-import img from "../../../public/assets/images/cnc-router.png";
+// import img from "../../../public/assets/images/cnc-router.png";
+import img from "../../../public/assets/images/2.png";
 import coc from "../../../public/assets/images/coc_2.png";
 import t from "../../../public/assets/images/t.png";
 import { Link as ScrollLink } from 'react-scroll';
@@ -60,13 +61,13 @@ const Hero = () => {
       <div
         data-aos="fade-up"
         data-aos-anchor-placement="bottom-bottom"
-        className="hidden md:flex h-[80%] pt-14 rounded-xl ovetrflow-hidden "
+        className="hidden h-[90%] sm:flex rounded-2xl overflow-hidden "
       >
         <Image
           alt="machine cnc"
           src={img}
           className="w-full h-auto object-cover  "
-          loading="lazy"
+          // loading="lazy"
         />
       </div>
     </section>

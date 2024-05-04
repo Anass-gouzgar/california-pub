@@ -7,16 +7,16 @@ const Card = ({ title, img, hoverImg }) => {
       <div className="relative h-[200px] w-full sm:h-[200px] rounded-lg ">
         <Image
           src={img}
-          height={70}
-          width={70}
+          height={0}
+          width={0}
           alt="image"
           className="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0"
         />
 
         <Image
           src={hoverImg}
-          height={70}
-          width={70}
+          height={0}
+          width={0}
           alt="image 2"
           className="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100"
         />

@@ -44,3 +44,28 @@ html {
 .grayscale:hover {
  filter: grayscale(0%);
 }
+
+
+/* Customize scrollbar for Chrome, Edge, and Opera */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FEE012; /* Light background */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FEE012; /* Yellow scrollbar */
+    border-radius: 6px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #FEE012; /* Slightly darker yellow when hovered */
+}
+
+/* Customize scrollbar for Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #FEE012 #382a2a;
+}
