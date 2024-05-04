@@ -66,6 +66,7 @@ const Hero = () => {
         <Image
           alt="machine cnc"
           src={img}
+          loading="lazy"
           className="w-full h-auto object-cover  "
           // loading="lazy"
         />
