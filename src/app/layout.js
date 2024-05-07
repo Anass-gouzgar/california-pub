@@ -1,5 +1,5 @@
 'use client'
-
+import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import Head from "next/head"; // Import the Head component
 import "./globals.css";
@@ -38,7 +38,9 @@ export default function RootLayout({ children }) {
         <meta property="og:type" content="website" />
         <Link rel="icon" href={metadata.icon} />
       </Head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children} <Analytics />
+      </body>
     </html>
   );
 }
