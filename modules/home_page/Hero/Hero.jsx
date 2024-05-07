@@ -68,7 +68,6 @@ const Hero = () => {
           src={img}
           loading="lazy"
           className="w-full h-auto object-cover  "
-          // loading="lazy"
         />
       </div>
     </section>
