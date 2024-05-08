@@ -1,5 +1,19 @@
 import dynamic from "next/dynamic";
 
+export const metadata = {
+  title: "California Pub",
+  description:
+    "Notre engagement envers l'excellence transforme chaque projet en une expérience inoubliable. Commencez votre voyage vers l'excellence avec une consultation personnalisée dès aujourd'hui.",
+  icon: "/icon.ico",
+  ogImage: "../../public/assets/images/og-logo.jpg",
+  ogUrl: "https://californiapublicite.ma",
+  keywords:
+    "publicité, CNC ROUTER, california pub cnc, marketing, communication, stratégie de marque, consultation personnalisée, excellence, voyage, consultation, marketing digital, publicité en ligne, stratégie de communication, agence de publicité, services de marketing, publicité et marketing, consultation marketing",
+};
+
+
+
+
 
 const Header = dynamic(() => import("/modules/home_page/Header/index.jsx"), {
     loading: () => <p></p>,
