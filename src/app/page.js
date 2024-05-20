@@ -61,7 +61,7 @@ const Header = dynamic(() => import("/modules/home_page/Header/index.jsx"), {
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-center w-full">
+    <div className="flex items-center justify-center w-full ::selection">
       <div className="h-auto sm:mlax-w-[1600px] w-full">
         <Header />
         <WhatsAppIcon />
