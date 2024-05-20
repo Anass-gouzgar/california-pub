@@ -69,3 +69,9 @@ html {
     scrollbar-width: thin;
     scrollbar-color: #FEE012 #382a2a;
 }
+
+
+/* Custom selection styles */
+::selection {
+  @apply bg-mainYellowColor text-black;
+}
