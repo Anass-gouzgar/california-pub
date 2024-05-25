@@ -10,7 +10,7 @@ const ServiceCard = ({ title, description, image, link }) => {
     <article
       data-aos="fade-up"
       data-aos-anchor-placement="bottom-bottom"
-      className="h-auto relative overflow-hidden bg-black rounded-lg hover:shadow-lg shadow-xl transition hover:border-slate-500 hover:shadow-amber-300"
+      className="group h-auto relative overflow-hidden bg-black rounded-lg hover:shadow-lg shadow-xl transition hover:border-slate-500 hover:shadow-amber-300"
     >
 
       <Image
@@ -19,7 +19,7 @@ const ServiceCard = ({ title, description, image, link }) => {
         layout="fill"
         loading="lazy"
         sizes="50vw"
-        className="absolute object-fihll inset-0 opacity-50 hover:opacity-100 transition-opacity duration-100"
+        className="absolute inset-0 opacity-50 group-hover:opacity-100 transition-opacity duration-300"
       />
       <div className=" h-full relative bg-gradient-to-t from-gray-900/50 to-gray-900/25 pt-32 sm:pt-48 lg:pt-64">
         <div className="p-4 sm:p-6">
@@ -40,7 +40,7 @@ const ServiceCard = ({ title, description, image, link }) => {
             En savoir plus
             <span
               aria-hidden="true"
-              className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
+              className="block group-hover:ms-0.5 group-hover:rotate-[360deg] transition-all duration-300 rtl:rotate-180"
             >
               &rarr;
             </span>
