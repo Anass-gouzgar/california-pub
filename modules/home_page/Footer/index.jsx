@@ -186,7 +186,7 @@ const Footer = () => {
             <p className="mt-8 text-sm sm:mt-0 text-gray-400">
               &copy; {currentYear}. California Pub. Tous droits réservés.
             </p>
-            <p className="mt-8 text-sm sm:mt-0 text-slate-900 hover:text-gray-400h">
+            <p className="mt-8 text-sm sm:mt-0 text-slate-400 hover:text-mainYellowColor">
               By{" "}
               <Link
                 href="https://www.linkedin.com/in/anassgouzgar"
