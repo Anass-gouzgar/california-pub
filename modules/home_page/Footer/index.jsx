@@ -147,12 +147,12 @@ const Footer = () => {
               </p>
 
               <div className="mt-6 space-y-4 text-sm flex flex-col">
-         <ScrollLink
-                    to="contact"
-                    spy={true}
-                    smooth={true}
-                    offset={-10}
-                    duration={500}
+                <ScrollLink
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-10}
+                  duration={500}
                   className="cursor-pointer transition hover:opacity-75 text-gray-200"
                 >
                   Contactez-Nous
@@ -189,7 +189,7 @@ const Footer = () => {
             <p className="mt-8 text-sm sm:mt-0 text-slate-400 hover:text-mainYellowColor">
               By{" "}
               <Link
-                href="https://www.linkedin.com/in/anassgouzgar"
+                href="https://api.whatsapp.com/send/?phone=%2B212606967994&text&type=phone_number&app_absent=0"
                 target="_blank"
               >
                 Anass GOUZGAR{" "}
