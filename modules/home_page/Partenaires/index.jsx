@@ -12,10 +12,10 @@ const index = () => {
   const Images = [logo1, logo2, logo3, logo4, logo5, logo6];
 
   return (
-    <section className="flex flex-col justify-center items-center gap-16 bg-gray-900  p-14 partBg">
+    <section className="flex flex-col items-center justify-center gap-16 bg-gray-900 p-14 partBg">
       {/* title */}
-      <h1 className="md:text-4xl text-3xl text-center font-bold w-full text-white">
-        il nous font confiance
+      <h1 className="w-full text-3xl font-bold text-center text-white md:text-4xl">
+        Partenaires
       </h1>
       {/* logos */}
       <div
@@ -24,7 +24,7 @@ const index = () => {
       >
         <Marquee speed={50} pauseOnHover={false}>
           {Images.map((image, i) => (
-            <div key={i} className="mr-6 md:mr-14 p-2">
+            <div key={i} className="p-2 mr-6 md:mr-14">
               <Image
                 src={image}
                 alt={`logo-${i}`}
@@ -33,7 +33,7 @@ const index = () => {
 
               {/* Add a divider after each image except the last one */}
 
-              <div className="h-1 bg-mainYellowColor w-1/2 mx-auto my-4 rounded-full"></div>
+              <div className="w-1/2 h-1 mx-auto my-4 rounded-full bg-mainYellowColor"></div>
             </div>
           ))}
         </Marquee>
