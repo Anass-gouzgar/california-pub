@@ -116,11 +116,11 @@ const NousContacter = () => {
           <form
             onSubmit={handleSubmit}
             data-aos="fade-up"
-            className="flex flex-col gap-7 mt-10"
+            className="flex flex-col gap-10 mt-10"
           >
             {/* First Row */}
-            <div className="flex flex-col justify-between md:flex-row gap-7">
-              <div className="flex flex-col w-full md:w-1/2 gap-1">
+            <div className="flex flex-col justify-between md:flex-row gap-7 md:gap-7">
+              <div className="flex flex-col w-full md:w-1/2 gap-3">
                 <label
                   htmlFor="full_name"
                   className="font-medium text-mainYellowColor "
@@ -132,7 +132,7 @@ const NousContacter = () => {
                   id="full_name"
                   name="full_name"
                   placeholder="Votre nom complet ..."
-                  className="bg-black/35  text-white text-sm border-b border-Gray focus:placgeholder:text-mainYellowColor focus:border-mainYellowColor outline-none py-2"
+                  className="bg-black/35 px-2 text-white text-sm border-b border-Gray focus:text-mainYellowColorg focus:border-mainYellowColor outline-none py-2 rounded-lg"
                   value={data.full_name}
                   onChange={handleChange}
                   //   required
@@ -144,7 +144,7 @@ const NousContacter = () => {
                   </span>
                 )}
               </div>
-              <div className="flex flex-col w-full md:w-1/2 gap-1">
+              <div className="flex flex-col w-full md:w-1/2 gap-3">
                 <label
                   htmlFor="entreprise"
                   className="font-medium text-mainYellowColor"
@@ -156,7 +156,7 @@ const NousContacter = () => {
                   id="entreprise"
                   name="entreprise"
                   placeholder="Nom de votre entreprise ..."
-                  className="text-sm border-b border-Gray bg-black/35  text-white  focus:placehodlder:text-mainYellowColor focus:border-mainYellowColor outline-none py-2"
+                  className="text-sm border-b border-Gray bg-black/35  text-white  focus:placehodlder:text-mainYellowColor focus:border-mainYellowColor outline-none py-2 px-2 rounded-lg"
                   value={data.entreprise}
                   onChange={handleChange}
                   //   required
@@ -172,7 +172,7 @@ const NousContacter = () => {
 
             {/* Second Row */}
             <div className="flex flex-col justify-between md:flex-row gap-7">
-              <div className="flex flex-col w-full md:w-1/2 gap-1">
+              <div className="flex flex-col w-full md:w-1/2 gap-3">
                 <label
                   htmlFor="email"
                   className="font-medium text-mainYellowColor"
@@ -184,7 +184,7 @@ const NousContacter = () => {
                   id="email"
                   name="email"
                   placeholder="Votre email ..."
-                  className="bg-black/35  text-white text-sm border-b border-Gray focus:placgeholder:text-mainYellowColor focus:border-mainYellowColor outline-none py-2"
+                  className="bg-black/35 text-white text-sm border-b border-Gray focus:placgeholder:text-mainYellowColor focus:border-mainYellowColor outline-none py-2 px-2 rounded-lg"
                   value={data.email}
                   onChange={handleChange}
                   //   required
@@ -193,7 +193,7 @@ const NousContacter = () => {
                   <span className="text-red-500 text-sm"> {errors.email} </span>
                 )}
               </div>
-              <div className="flex flex-col w-full md:w-1/2 gap-1">
+              <div className="flex flex-col w-full md:w-1/2 gap-3">
                 <label
                   htmlFor="phone_nbr"
                   className="font-medium text-mainYellowColor"
@@ -205,7 +205,7 @@ const NousContacter = () => {
                   id="phone_nbr"
                   name="phone_nbr"
                   placeholder="Votre numéro de téléphone ..."
-                  className="bg-black/35  text-white text-sm border-b border-Gray focus:placgeholder:text-mainYellowColor focus:border-mainYellowColor outline-none py-2"
+                  className="bg-black/35 text-white text-sm border-b border-Gray focus:placgeholder:text-mainYellowColor focus:border-mainYellowColor outline-none py-2 px-2 rounded-lg"
                   value={data.phone_nbr}
                   onChange={handleChange}
                   //   required
@@ -221,7 +221,7 @@ const NousContacter = () => {
 
             {/* Third Row */}
             <div className="flex flex-col justify-between md:flex-row">
-              <div className="flex flex-col w-full gap-1">
+              <div className="flex flex-col w-full gap-3">
                 <label
                   htmlFor="message"
                   className="font-medium text-mainYellowColor"
@@ -232,7 +232,7 @@ const NousContacter = () => {
                   id="message"
                   name="message"
                   placeholder="Votre message ..."
-                  className="bg-black/35 focus:border-mainYellowColor outline-none text-white text-sm border-b border-Gray focus:plfaceholder:text-mainYellowColor focus:border-mainYellowColoroutline-none py-2"
+                  className="bg-black/35 focus:border-mainYellowColor outline-none text-white text-sm border-b border-Gray focus:plfaceholder:text-mainYellowColor focus:border-mainYellowColoroutline-none py-2 px-2 rounded-lg"
                   value={data.message}
                   onChange={handleChange}
                   rows={5}
@@ -250,14 +250,13 @@ const NousContacter = () => {
             {/* button envoyer */}
             <div className="text-center md:text-justify ">
               <span>
-                              <input
-                data-aos="fade-up"
-                type="submit"
-                value={loading ? "Envoi ..." : "Envoyer"}
-                className="hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out       mt-5   bg-gradient-to-r bg-mainYellowColor w-full max-w-[300px] text-lg text-center text-black py-2 rounded-[10px] hover:opacity-90 cursor-pointer"
-              />
+                <input
+                  data-aos="fade-up"
+                  type="submit"
+                  value={loading ? "Envoi ..." : "Envoyer"}
+                  className="hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out       mt-5   bg-gradient-to-r bg-mainYellowColor w-full max-w-[300px] text-lg text-center text-black py-2 rounded-[10px] hover:opacity-90 cursor-pointer"
+                />
               </span>
-
             </div>
           </form>
         </div>

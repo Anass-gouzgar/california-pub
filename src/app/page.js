@@ -69,8 +69,6 @@ export default function Home() {
         <Divider />
         <Partenaires />
         <Divider />
-        <Faq />
-        <Divider />
         <Services />
         <Divider />
         <RawMaterials />
@@ -78,6 +76,8 @@ export default function Home() {
         <ContactForm />
         <Divider />
         <Map />
+        <Divider />
+        <Faq />
         <Divider />
         <Footer />
       </div>

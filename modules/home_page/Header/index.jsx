@@ -38,8 +38,8 @@ const Header = () => {
     <header
       className={`flex justify-center items-center mx-auto fixed top-0 left-0 right-0 z-10 ${headerClass}`}
     >
-      <div className="mx-auto max-w-screhen-xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center gap-10 my-3 bg-yegllow-500">
+      <div className="px-4 mx-auto max-w-screhen-xl sm:px-6 lg:px-8">
+        <div className="flex items-center h-16 gap-10 my-3 bg-yegllow-500">
           {/* logo */}
           <div className="">
             <ScrollLink
@@ -54,12 +54,12 @@ const Header = () => {
                 alt="logo"
                 width={200}
                 height={20}
-                className="h-auto w-auto object-cover cursor-pointer"
+                className="object-cover w-auto h-auto cursor-pointer"
               />
             </ScrollLink>
           </div>
           {/* navigation links */}
-          <div className="hidden md:block pt-3 ">
+          <div className="hidden pt-3 md:block ">
             <nav aria-label="Global">
               <div className="flex items-center gap-6 text-lg">
                 {navLinks.map((link, index) => (
@@ -83,7 +83,7 @@ const Header = () => {
             <div className="sm:flex sm:gap-4">
               <Link
                 href="tel:+212768049725"
-                className="block w-[100px] text-center rounded bg-mainYellowColor py-2 text-sm font-bold text-black transition hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
+                className="block w-[110px] text-center rounded bg-mainYellowColor py-2 text-sm font-bold text-black transition hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
               >
                 Appelle-nous
               </Link>
@@ -92,11 +92,11 @@ const Header = () => {
             <div className="block md:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="rounded p-2 transition bg-gray-800 text-white hover:text-white/75"
+                className="p-2 text-white transition bg-gray-800 rounded hover:text-white/75"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
+                  className="w-5 h-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -116,9 +116,9 @@ const Header = () => {
 
       {/* Mobile navigation menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-50">
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden">
           <div className="absolute right-0 w-[90%] h-screen bg-slate-900/90 shadow-lg">
-            <nav className="text-lg flex flex-col items-center justify-center h-full gap-4 py-4">
+            <nav className="flex flex-col items-center justify-center h-full gap-4 py-4 text-lg">
               {navLinks.map((link, index) => (
                 <ScrollLink
                   key={index}
@@ -142,12 +142,12 @@ const Header = () => {
             </nav>
 
             <button
-              className="absolute top-4 right-4 text-white hover:text-gray-300"
+              className="absolute text-white top-4 right-4 hover:text-gray-300"
               onClick={() => setMobileMenuOpen(false)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="w-6 h-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
