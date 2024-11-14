@@ -18,7 +18,8 @@
     "react-fast-marquee": "^1.6.4",
     "react-scroll": "^1.9.0",
     "react-toastify": "^10.0.5",
-    "swiper": "^11.1.0"
+    "swiper": "^11.1.0",
+    "tailwindcss-motion": "^0.4.1-beta"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",

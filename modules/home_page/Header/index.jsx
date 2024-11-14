@@ -38,12 +38,12 @@ const Header = () => {
     <header
       className={`flex justify-center items-center mx-auto fixed top-0 left-0 right-0 z-10 ${headerClass}`}
     >
-      <div className="px-4 mx-auto max-w-screhen-xl sm:px-6 lg:px-8">
+      <div className="px-4 mx-auto max-w-screhen-xl sm:px-6 lg:px-8 motion-scale-in-[0.5] motion-rotate-in-[-10deg] motion-blur-in-[10px] motion-delay-[0.75s]/rotate motion-delay-[0.75s]/blur">
         <div className="flex items-center h-16 gap-10 my-3 bg-yegllow-500">
           {/* logo */}
           <div className="">
             <ScrollLink
-               to="Hero"
+              to="Hero"
               spy={true}
               smooth={true}
               offset={-10}
@@ -116,7 +116,7 @@ const Header = () => {
 
       {/* Mobile navigation menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden">
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden motion-scale-in-[0.5] motion-rotate-in-[-10deg] motion-blur-in-[10px] motion-delay-[0.75s]/rotate motion-delay-[0.75s]/blur">
           <div className="absolute right-0 w-[90%] h-screen bg-slate-900/90 shadow-lg">
             <nav className="flex flex-col items-center justify-center h-full gap-4 py-4 text-lg">
               {navLinks.map((link, index) => (
@@ -125,10 +125,7 @@ const Header = () => {
                   to={link.href}
                   className="relative hover:cursor-wakit text-gray-500 hover:text-gray-500/75 z-50 before:content-[''] before:absolute before:w-0 before:h-2 before:bg-amber-500 before:bottom-0 before:rounded-xl before:-z-10 hover:before:w-1/2 before:duration-300"
                 >
-                  <button>
-                                      {link.name}
-
-                  </button>
+                  <button>{link.name}</button>
                 </ScrollLink>
               ))}
               <div className="sm:flex sm:gap-4">
