@@ -50,8 +50,8 @@ const Header = () => {
     <header
       className={`flex justify-center items-center mx-auto fixed top-0 left-0 right-0 z-10 ${headerClass}`}
     >
-      <div className="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="flex items-center h-16 gap-10 my-3">
+      <div className="px-4 mx-auto max-w-screhen-xl sm:px-6 lg:px-8 motion-scale-in-[0.5] motion-rotate-in-[-10deg] motion-blur-in-[10px] motion-delay-[0.75s]/rotate motion-delay-[0.75s]/blur">
+        <div className="flex items-center h-16 gap-10 my-3 bg-yegllow-500">
           {/* Logo */}
           <div>
             <ScrollLink
@@ -95,7 +95,7 @@ const Header = () => {
             <div className="sm:flex sm:gap-4">
               <Link
                 href="tel:+212768049725"
-                className="block w-[110px] text-center rounded bg-mainYellowColor py-2 text-sm font-bold text-black transition hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
+                className="block w-[110px]  text-center rounded bg-mainYellowColor py-2 text-sm font-bold text-black transition hover:bg-amber-300 focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 duration-300 ease-in-out"
               >
                 Appelle-nous
               </Link>
@@ -130,7 +130,7 @@ const Header = () => {
       {mobileMenuOpen && (
         <div
           ref={menuRef}
-          className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden"
+          className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden motion-scale-in-[0.5] motion-rotate-in-[-10deg] motion-blur-in-[10px] motion-delay-[0.75s]/rotate motion-delay-[0.75s]/blur"
         >
           <div className="absolute right-0 w-[90%] h-screen bg-slate-900/90 shadow-lg">
             <nav className="flex flex-col items-center justify-center h-full gap-4 py-4 text-lg">
@@ -142,7 +142,7 @@ const Header = () => {
                   smooth={true}
                   offset={-80}
                   duration={500}
-                  className="relative text-gray-200 hover:cursor-pointer z-50 before:content-[''] before:absolute before:w-0 before:h-2 before:bg-amber-500 before:bottom-0 before:rounded-xl before:-z-10 hover:before:w-1/2 before:duration-300"
+                  className="relative hover:cursor-wakit text-gray-500 hover:text-gray-500/75 z-50 before:content-[''] before:absolute before:w-0 before:h-2 before:bg-amber-500 before:bottom-0 before:rounded-xl before:-z-10 hover:before:w-1/2 before:duration-300"
                   onClick={() => setMobileMenuOpen(false)} // Close menu on link click
                 >
                   {link.name}
