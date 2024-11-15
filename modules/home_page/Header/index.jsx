@@ -1,14 +1,15 @@
-"use client"
-import React, { useEffect, useState } from "react";
+"use client";
+import React, { useEffect, useState, useRef } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import Image from "next/image";
-import Link from "next/link"; // Importez Link de Next.js
+import Link from "next/link";
 
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
-  const headerClass = scrolling ? "bg-black/55 shadow-xl" : "";
+  const headerClass = scrolling ? "bg-black/55 shadow-xl z-50" : "";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,11 +18,22 @@ const Header = () => {
       } else {
         setScrolling(false);
       }
+      // Close the mobile menu on scroll
+      setMobileMenuOpen(false);
+    };
+
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMobileMenuOpen(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -38,10 +50,10 @@ const Header = () => {
     <header
       className={`flex justify-center items-center mx-auto fixed top-0 left-0 right-0 z-10 ${headerClass}`}
     >
-      <div className="px-4 mx-auto max-w-screhen-xl sm:px-6 lg:px-8 motion-scale-in-[0.5] motion-rotate-in-[-10deg] motion-blur-in-[10px] motion-delay-[0.75s]/rotate motion-delay-[0.75s]/blur">
-        <div className="flex items-center h-16 gap-10 my-3 bg-yegllow-500">
-          {/* logo */}
-          <div className="">
+      <div className="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+        <div className="flex items-center h-16 gap-10 my-3">
+          {/* Logo */}
+          <div>
             <ScrollLink
               to="Hero"
               spy={true}
@@ -58,8 +70,8 @@ const Header = () => {
               />
             </ScrollLink>
           </div>
-          {/* navigation links */}
-          <div className="hidden pt-3 md:block ">
+          {/* Navigation Links */}
+          <div className="hidden pt-3 md:block">
             <nav aria-label="Global">
               <div className="flex items-center gap-6 text-lg">
                 {navLinks.map((link, index) => (
@@ -78,7 +90,7 @@ const Header = () => {
               </div>
             </nav>
           </div>
-          {/* call to action : call */}
+          {/* Call to Action */}
           <div className="flex items-center gap-4 pt-3">
             <div className="sm:flex sm:gap-4">
               <Link
@@ -114,18 +126,26 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile navigation menu */}
+      {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden motion-scale-in-[0.5] motion-rotate-in-[-10deg] motion-blur-in-[10px] motion-delay-[0.75s]/rotate motion-delay-[0.75s]/blur">
+        <div
+          ref={menuRef}
+          className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden"
+        >
           <div className="absolute right-0 w-[90%] h-screen bg-slate-900/90 shadow-lg">
             <nav className="flex flex-col items-center justify-center h-full gap-4 py-4 text-lg">
               {navLinks.map((link, index) => (
                 <ScrollLink
                   key={index}
                   to={link.href}
-                  className="relative hover:cursor-wakit text-gray-500 hover:text-gray-500/75 z-50 before:content-[''] before:absolute before:w-0 before:h-2 before:bg-amber-500 before:bottom-0 before:rounded-xl before:-z-10 hover:before:w-1/2 before:duration-300"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={500}
+                  className="relative text-gray-200 hover:cursor-pointer z-50 before:content-[''] before:absolute before:w-0 before:h-2 before:bg-amber-500 before:bottom-0 before:rounded-xl before:-z-10 hover:before:w-1/2 before:duration-300"
+                  onClick={() => setMobileMenuOpen(false)} // Close menu on link click
                 >
-                  <button>{link.name}</button>
+                  {link.name}
                 </ScrollLink>
               ))}
               <div className="sm:flex sm:gap-4">
